@@ -1,0 +1,8 @@
+[ODBC]
+DRIVER=SQL Server
+UID=105881_da56307
+Network=DBMSSOCN
+WSID=ZEVSLAP
+APP=Microsoft Office 2016
+SERVER=sponsor-105881.mssql.stwcp.net
+Description=Sponsor Cloud
