@@ -1,7 +1,7 @@
 !define M314_NAME "Sponsor"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219467&authkey=ADCyIueMFH5mXtM"
+!define AUTOUPDATE_URL "https://github.com/Kringla/MaineBoat/raw/master/Public/Installs/M314SponsorSetup.exe"
 
 ;---------------------------------------------------------------
 

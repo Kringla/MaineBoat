@@ -70,7 +70,7 @@ RunAndLogonIfExist(sFilename, sUsername, sPassword, sSetupFile, sMessage)
 			MsgBox, 64,, %sMessage%
 		}
 		
-		RunAutoUpdater(sSetupFile)		
+		;RunAutoUpdater(sSetupFile)		
 	}
 }
 
