@@ -60,7 +60,7 @@ Unicode true
  
 ;--------------------------------
  
-;XPStyle on
+XPStyle on
 ;ShowInstDetails hide
 ;ShowUninstDetails hide
 

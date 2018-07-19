@@ -1,7 +1,7 @@
 !define M314_NAME "PMS"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://github.com/Kringla/MaineBoat/raw/master/Public/Installs/M314PMSSetup.exe"
+!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219472&authkey=AFmwt85YBDy9nJo"
 
 ;---------------------------------------------------------------
 

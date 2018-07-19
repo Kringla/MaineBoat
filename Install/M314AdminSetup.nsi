@@ -1,7 +1,7 @@
 !define M314_NAME "Admin"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://github.com/Kringla/MaineBoat/raw/master/Public/Installs/M314AdminSetup.exe"
+!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219471&authkey=ADGVC_icT6-gqtQ"
 
 ;---------------------------------------------------------------
 
