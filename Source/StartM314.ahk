@@ -63,7 +63,7 @@ RunAndLogonIfExist(sFilename, sUsername, sPassword, sSetupFile, sMessage)
 	{
 		Run, %sFilename%
 		
-		LogonSqlAccess(sUsername, sPassword)
+		;LogonSqlAccess(sUsername, sPassword)
 		
 		if (StrLen(sMessage) <> 0)
 		{
