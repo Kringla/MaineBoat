@@ -1,7 +1,7 @@
 !define M314_NAME "Selskap"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219470&authkey=AMRpqFk5itzzNNc"
+!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219491&authkey=AAHdUlQLX2Lhi3s"
 
 ;---------------------------------------------------------------
 
@@ -12,7 +12,7 @@ Function AddFiles
   ${TryDeleteFile} "$INSTDIR\M314${M314_NAME}.accdb" $R1
   ${TryDeleteFile} "$INSTDIR\M314${M314_NAME}.accde" $R1
 
-  File "Files\M314${M314_NAME}.accde"
+  File /a "Files\M314${M314_NAME}.accde"
 FunctionEnd
 
 Function un.DeleteFiles

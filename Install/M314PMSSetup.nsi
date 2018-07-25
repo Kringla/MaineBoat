@@ -1,7 +1,7 @@
 !define M314_NAME "PMS"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219472&authkey=AFmwt85YBDy9nJo"
+!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219490&authkey=AHsT4U_HS4A6Xvo"
 
 ;---------------------------------------------------------------
 
@@ -12,7 +12,7 @@ Function AddFiles
   ${TryDeleteFile} "$INSTDIR\M314${M314_NAME}.accdb" $R1
   ${TryDeleteFile} "$INSTDIR\M314${M314_NAME}.accde" $R1
 
-  File "Files\M314${M314_NAME}.accde"
+  File /a "Files\M314${M314_NAME}.accde"
 FunctionEnd
 
 Function un.DeleteFiles

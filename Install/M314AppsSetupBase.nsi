@@ -290,10 +290,10 @@ Section
   ;WriteRegStr HKLM "${PRODUCT_REGKEY}" "Install_Dir" "$INSTDIR"
   
   ; Put files here
-  File "Files\App.ico"
-  File "Files\CIAutoUpdater.exe"
-  File "Files\StartM314.exe"
-  File "Files\MSAccessTrustedLocations.exe"
+  File /a "Files\App.ico"
+  File /a "Files\CIAutoUpdater.exe"
+  File /a "Files\StartM314.exe"
+  File /a "Files\MSAccessTrustedLocations.exe"
   
   ; package all files, recursively, preserving attributes
   ; assume files are in the correct places

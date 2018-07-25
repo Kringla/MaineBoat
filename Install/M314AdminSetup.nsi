@@ -1,7 +1,7 @@
 !define M314_NAME "Admin"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219471&authkey=ADGVC_icT6-gqtQ"
+!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219492&authkey=ACBMq1RP3gzVa2o"
 
 ;---------------------------------------------------------------
 
@@ -12,7 +12,7 @@ Function AddFiles
   ${TryDeleteFile} "$INSTDIR\M314${M314_NAME}.accdb" $R1
   ${TryDeleteFile} "$INSTDIR\M314${M314_NAME}.accde" $R1
 
-  File "Files\M314${M314_NAME}.accde"
+  File /a "Files\M314${M314_NAME}.accde"
 FunctionEnd
 
 Function un.DeleteFiles
