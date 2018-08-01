@@ -1,7 +1,7 @@
 !define M314_NAME "AdminRep"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://1drv.ms/u/s!AhWaYj9Q8eY4yhrLTEOQmdT3iHy6"
+!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219498&authkey=AFc_sVw6r2Nw0Co"
 
 ;---------------------------------------------------------------
 

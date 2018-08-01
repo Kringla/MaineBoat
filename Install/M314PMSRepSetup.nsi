@@ -1,7 +1,7 @@
 !define M314_NAME "PMSRep"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://1drv.ms/u/s!AhWaYj9Q8eY4yhvVqhCBtCLz8rV0"
+!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219499&authkey=AOG2RXErHXx9w3c"
 
 ;---------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 !define M314_NAME "SponsorRep"
  
 ; Auto Updater
-!define AUTOUPDATE_URL "https://1drv.ms/u/s!AhWaYj9Q8eY4yh2f0umXy7s4ipyS"
+!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219501&authkey=AAqtsFG2HP-c8MA"
 
 ;---------------------------------------------------------------
 
