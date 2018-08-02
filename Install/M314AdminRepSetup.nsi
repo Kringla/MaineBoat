@@ -1,11 +1,11 @@
 !define M314_NAME "AdminRep"
  
-; Auto Updater
-!define AUTOUPDATE_URL "https://onedrive.live.com/download?cid=38E6F1503F629A15&resid=38E6F1503F629A15%219498&authkey=AFc_sVw6r2Nw0Co"
-
 ;---------------------------------------------------------------
 
-!include "M314AppsSetupBase.nsi"
+; Auto Updater
+!define AUTOUPDATE_URL "http://m314alta.org/installs/M314${M314_NAME}Setup.exe"
+
+!include "_M314AppsSetupBase.nsi"
 
 Function AddFiles
   ;Try to delete db FileSees
