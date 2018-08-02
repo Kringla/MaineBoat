@@ -1,3 +1,4 @@
+setlocal
 SET /P AREYOUSURE=Er du sikker paa at du vil laste opp filen (Y/N)?
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
@@ -17,3 +18,4 @@ ftp -i -s:ftpcmd.dat
 del ftpcmd.dat
 
 :END
+endlocal

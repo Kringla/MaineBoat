@@ -60,9 +60,7 @@ LogonSqlAccess(sUsername, sPassword)
 RunAndLogonIfExist(sFilename, sUsername, sPassword, sSetupFile, sMessage)
 {	
 	IfExist, %sFilename%
-	{
-		RunAutoUpdater(sSetupFile)
-		
+	{		
 		Run, %sFilename%
 		
 		;LogonSqlAccess(sUsername, sPassword)
@@ -70,7 +68,9 @@ RunAndLogonIfExist(sFilename, sUsername, sPassword, sSetupFile, sMessage)
 		if (StrLen(sMessage) <> 0)
 		{
 			MsgBox, 64,, %sMessage%
-		}				
+		}	
+		
+		RunAutoUpdater(sSetupFile)			
 	}
 }
 
