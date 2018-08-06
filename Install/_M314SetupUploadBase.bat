@@ -19,3 +19,4 @@ del ftpcmd.dat
 
 :END
 endlocal
+pause
