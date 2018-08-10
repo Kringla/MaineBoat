@@ -137,7 +137,7 @@ Function SetInstallUpdate
   ;Get Installer filename
   System::Call 'kernel32::GetModuleFileName(p 0, t .R0, i ${NSIS_MAX_STRLEN}) i.r1'
   
-  ${GetBaseName} $R0 $R1 ;R1 contans filename without ext
+  ;${GetBaseName} $R0 $R1 ;R1 contans filename without ext
   
   ${GetTime} $R0 "MS" $0 $1 $2 $3 $4 $5 $6
 	; $0="01"      day
@@ -151,9 +151,9 @@ Function SetInstallUpdate
 
   SetRegView 64
   
-  WriteRegStr HKLM ${PRODUCT_REGKEY} '$R1InstallTime' '$0.$1.$2 $4:$5:$6'
+  WriteRegStr HKLM ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallTime' '$0.$1.$2 $4:$5:$6'
   
-  WriteRegStr HKLM ${PRODUCT_REGKEY} '$R1InstallUrl' ${AUTOUPDATE_URL}
+  WriteRegStr HKLM ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallUrl' ${AUTOUPDATE_URL}
   
     DetailPrint "SetInstallUpdate reg values"
 FunctionEnd

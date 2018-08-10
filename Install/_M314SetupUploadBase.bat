@@ -1,6 +1,6 @@
 setlocal
-SET /P AREYOUSURE=Er du sikker paa at du vil laste opp filen (Y/N)?
-IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
+REM SET /P AREYOUSURE=Er du sikker paa at du vil laste opp filen (Y/N)?
+REM IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
 @echo off
 echo open ftp.m314alta.org>> ftpcmd.dat
@@ -19,4 +19,4 @@ del ftpcmd.dat
 
 :END
 endlocal
-pause
+REM pause
