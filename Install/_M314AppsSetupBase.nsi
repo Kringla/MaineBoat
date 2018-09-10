@@ -213,7 +213,7 @@ noerror:
  
 nook:
   StrCpy $R1 0
-  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION "$R0 kjører. Vennligst lukk og prøv igjen." IDRETRY startdelete
+  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION "$R0 kjører.$\nVennligst lukk databasen og prøv igjen ved å klikke Prøv igjen\Retry.$\nDu kan flytte på dette vinduet hvis nødvendig for å komme til avslutt-knappen!$\nNB: Hvis du klikker på Avbryt\Cancel vil ikke installasjonen bli gjennomført!" IDRETRY startdelete
 	Abort
  
 exit:
