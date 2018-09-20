@@ -213,7 +213,7 @@ noerror:
  
 nook:
   StrCpy $R1 0
-  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION "$R0 kjører.$\nVennligst lukk databasen og prøv igjen ved å klikke Prøv igjen\Retry.$\nDu kan flytte på dette vinduet hvis nødvendig for å komme til avslutt-knappen!$\nNB: Hvis du klikker på Avbryt\Cancel vil ikke installasjonen bli gjennomført!" IDRETRY startdelete
+  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION "Database applikasjonen $R0 har startet opp. En nyere versjon av databasen skal installeres. $\nVennligst lukk databasen med databasens AVSLUTT-knapp, og klikk deretter PROEV IGJEN\RETRY-knappen for at installasjonen av en nyere versjon skal kunne fullfoeres." IDRETRY startdelete
 	Abort
  
 exit:
@@ -256,7 +256,7 @@ noerror:
  
 nook:
   StrCpy $R1 0
-  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION "$R0 kjører. Vennligst lukk og prøv igjen." IDRETRY startdelete
+  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION "Database applikasjonen $R0 har startet opp. En nyere versjon av databasen skal installeres. $\nVennligst lukk databasen med databasens AVSLUTT-knapp, og klikk deretter PROEV IGJEN/RETRY-knappen for at installasjonen av en nyere versjon skal kunne fullfoeres." IDRETRY startdelete
 	Abort
  
 exit:
@@ -332,11 +332,11 @@ File /a "${srcdir}\${notefile}"
   ExecWait '"$INSTDIR\MSAccessTrustedLocations.exe" /ADD "$INSTDIR" 0 "M314 Apps Location"'
   
   ;SetDetailsPrint listonly
-  DetailPrint "${PRODUCT_NAME} installasjon ferdig"
+  DetailPrint "${PRODUCT_NAME} er ferdig installert. Du kan naa aapne databasen paa nytt!"
   ;SetDetailsPrint none
   
   IfSilent 0 +2
-	MessageBox MB_OK|MB_ICONINFORMATION "${PRODUCT_NAME} er ferdig installert."
+	MessageBox MB_OK|MB_ICONINFORMATION "${PRODUCT_NAME} er ferdig installert. Du kan naa aapne databasen paa nytt!"
  
 
  
