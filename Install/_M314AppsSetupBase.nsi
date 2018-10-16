@@ -294,6 +294,7 @@ Section
   File /a "Files\CIAutoUpdater.exe"
   File /a "Files\StartM314.exe"
   File /a "Files\MSAccessTrustedLocations.exe"
+  File /a "Files\Readme.txt"
   
   ; package all files, recursively, preserving attributes
   ; assume files are in the correct places
@@ -330,6 +331,8 @@ File /a "${srcdir}\${notefile}"
      
   Exec "$INSTDIR\StartM314.exe" 
   ExecWait '"$INSTDIR\MSAccessTrustedLocations.exe" /ADD "$INSTDIR" 0 "M314 Apps Location"'
+  
+  ExecShell "open" "$INSTDIR\Readme.txt" 
   
   ;SetDetailsPrint listonly
   DetailPrint "Databasen ${PRODUCT_NAME} er ferdig installert. Du kan naa aapne databasen paa nytt!"
