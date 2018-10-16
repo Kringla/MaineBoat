@@ -1,7 +1,6 @@
 ; basic script
 
-  ;Properly display all languages (Installer will not work on Windows 95, 98 or ME!)
-  Unicode true
+Unicode true
 
 !addplugindir ".\"
 
@@ -32,7 +31,10 @@
  
 ; text file to open in notepad after installation
 ; !define notefile "README.txt"
-  
+ 
+; license text file
+; !define licensefile license.txt
+ 
 ; icons must be Microsoft .ICO files
  !define icon "Files\App.ico"
  
@@ -59,7 +61,7 @@
 ;--------------------------------
 
 ;Loads the Nsis language file, necessary for unistall messages.
-;LoadLanguageFile "${NSISDIR}\Contrib\Language files\Norwegian.nlf"
+LoadLanguageFile "${NSISDIR}\Contrib\Language files\Norwegian.nlf"
  
 ;XPStyle on
 
@@ -71,8 +73,7 @@ Name "${PRODUCT_NAME}"
 Caption "${PRODUCT_NAME}"
  
 !ifdef icon
-  !define MUI_ICON "${icon}"
-  !define MUI_UNICON "${icon}"
+Icon "${icon}"
 !endif
  
 OutFile "${SETUP_FILEBASE}.exe"
@@ -85,29 +86,25 @@ OutFile "${SETUP_FILEBASE}.exe"
 InstallDir "${defaultInstallDir}"
 InstallDirRegKey HKLM "${PRODUCT_REGKEY}" "${PRODUCT_NAME}"
  
-
-;LANGUAGE 
-!include "MUI2.nsh"
-
-!define MUI_LANGDLL_REGISTRY_ROOT "HKCU"
-!define MUI_LANGDLL_REGISTRY_KEY "${PRODUCT_REGKEY}"
-!define MUI_LANGDLL_REGISTRY_VALUENAME "Installer Language"
-
+!ifdef licensefile
+LicenseText "License"
+LicenseData "${srcdir}\${licensefile}"
+!endif
+ 
 ; pages
 ; we keep it simple - leave out selectable installation types
-
  
-
+!ifdef licensefile
+Page license
+!endif
+ 
 ; Page components
-  !insertmacro MUI_PAGE_DIRECTORY
-  !insertmacro MUI_PAGE_INSTFILES
+Page directory
+Page instfiles
  
-  !insertmacro MUI_UNPAGE_CONFIRM
-  !insertmacro MUI_UNPAGE_INSTFILES
-  
-!insertmacro MUI_LANGUAGE "Norwegian"
-
-!insertmacro MUI_RESERVEFILE_LANGDLL 
+UninstPage uninstConfirm
+UninstPage instfiles
+ 
 ;--------------------------------
  
 AutoCloseWindow false
@@ -116,6 +113,11 @@ ShowInstDetails show
 ; Request application privileges for Windows Vista+
 RequestExecutionLevel admin
 
+ LangString DBBusyMessage ${LANG_NORWEGIAN} "Database applikasjonen ${PRODUCT_NAME} har startet opp. En nyere versjon av databasen skal installeres. $\nVennligst lukk databasen med databasens AVSLUTT-knapp, og klikk deretter PRØV IGJEN-knappen for at installasjonen av en nyere versjon skal kunne fullføres."
+
+!define MUI_LANGDLL_REGISTRY_ROOT "HKCU"
+!define MUI_LANGDLL_REGISTRY_KEY "${PRODUCT_REGKEY}"
+!define MUI_LANGDLL_REGISTRY_VALUENAME "Installer Language"
 
 !ifdef screenimage
  
@@ -197,7 +199,6 @@ FunctionEnd
 ;SectionEnd
 ;
 
-LangString DBBusyMsg ${LANG_NORWEGIAN} "Database applikasjonen ${PRODUCT_NAME} har startet opp. En nyere versjon av databasen skal installeres. $\nVennligst lukk databasen med databasens AVSLUTT-knapp, og klikk deretter RETRY\PROEV IGJEN-knappen for at installasjonen av en nyere versjon skal kunne fullfoeres."
 
 Function TryDeleteFile
   !define TryDeleteFile `!insertmacro TryDeleteFileCall`
@@ -232,7 +233,7 @@ noerror:
  
 nook:
   StrCpy $R1 0
-   MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION $(DBBusyMsg) IDRETRY startdelete
+   MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION $(DBBusyMessage) IDRETRY startdelete
 	Abort
  
 exit:
@@ -275,7 +276,7 @@ noerror:
  
 nook:
   StrCpy $R1 0
-  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION "Database applikasjonen ${PRODUCT_NAME} har startet opp. En nyere versjon av databasen skal installeres. $\nVennligst lukk databasen med databasens AVSLUTT-knapp, og klikk deretter RETRY\PROEV IGJEN-knappen for at installasjonen av en nyere versjon skal kunne fullfoeres." IDRETRY startdelete
+  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION $(DBBusyMessage) IDRETRY startdelete
 	Abort
  
 exit:
@@ -286,6 +287,12 @@ exit:
 FunctionEnd
 
 
+Function .onInit
+
+  ;Auto Updater
+  ;Call SetInstallUpdate
+
+FunctionEnd
 
 ; beginning (invisible) section
 Section
@@ -297,25 +304,34 @@ Section
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
   
-
-  
-  ;WriteRegStr HKLM "${PRODUCT_REGKEY}" "Install_Dir" "$INSTDIR"
-     
-; any application-specific files
-;!ifdef files
-;!include "${files}"
-;!endif
-  Call AddFiles  
-  
   ;Auto-kill autohotkey process
   ${nsProcess::CloseProcess} "StartM314.exe" $R0
   
-    ; Put files here
+  ;WriteRegStr HKLM "${PRODUCT_REGKEY}" "Install_Dir" "$INSTDIR"
+  
+  ; Put files here
   File /a "Files\App.ico"
   File /a "Files\CIAutoUpdater.exe"
   File /a "Files\StartM314.exe"
   File /a "Files\MSAccessTrustedLocations.exe"
   File /a "Files\M314${M314_NAME}_Readme.txt"
+  
+  ; package all files, recursively, preserving attributes
+  ; assume files are in the correct places
+ 
+!ifdef licensefile
+File /a "${srcdir}\${licensefile}"
+!endif
+ 
+!ifdef notefile
+File /a "${srcdir}\${notefile}"
+!endif
+  
+; any application-specific files
+;!ifdef files
+;!include "${files}"
+;!endif
+  Call AddFiles  
   
   ; write uninstall strings
   WriteRegStr HKLM "${uninstkey}" "DisplayName" "${PRODUCT_NAME}"
@@ -339,8 +355,7 @@ Section
   ExecShell "open" "$INSTDIR\M314${M314_NAME}_Readme.txt" 
   
   ;SetDetailsPrint listonly
-  DetailPrint ""
-  DetailPrint "Databasen ${PRODUCT_NAME} er ferdig installert. Du kan naa aapne databasen paa nytt!"
+  DetailPrint "Databasen ${PRODUCT_NAME} er ferdig installert. Du kan nå åpne databasen på nytt!"
   ;SetDetailsPrint none
   
   ;IfSilent 0 +2
