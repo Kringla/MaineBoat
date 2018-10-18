@@ -78,10 +78,6 @@ RunAndLogonIfExist(sFilename, sUsername, sPassword, sSetupFile, sMessage)
 	RunAndLogonIfExist("M314PMS.accde", "105881_sc66800", "Maine1953", "M314PMSSetup", "")
 Return
 
-#6::
-	RunAndLogonIfExist("M314PMSRep.accde", "105881_tp18426", "M314Alta", "M314PMSRepSetup", "NB! Du kan ikke legge til, endre eller slette noe, kun lese og skrive ut!")
-Return
-
 #7::
 	RunAndLogonIfExist("M314Admin.accde", "105881_kr28513", "Maine1953", "M314AdminSetup", "")
 Return
@@ -94,15 +90,8 @@ Return
 	RunAndLogonIfExist("M314Selskap.accde", "105881_lt85170", "Maine1953", "M314SelskapSetup", "")
 Return
 
-#2::
-	RunAndLogonIfExist("M314SelskapRep.accde", "105881_kt53449", "M314Alta", "M314SelskapRepSetup", "NB! Du kan ikke legge til, endre eller slette noe, kun lese og skrive ut!")
-Return
-
 #3::
 	RunAndLogonIfExist("M314Sponsor.accde", "105881_da56307", "Maine1953", "M314SponsorSetup", "")
 Return
 
-#4::
-	RunAndLogonIfExist("M314SponsorRep.accde", "105881_ft28643", "M314Alta", "M314SponsorRepSetup", "NB! Du kan ikke legge til, endre eller slette noe, kun lese og skrive ut!")
-Return
 
