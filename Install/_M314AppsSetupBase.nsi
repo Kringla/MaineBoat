@@ -336,12 +336,13 @@ Section
   Exec "$INSTDIR\StartM314.exe" 
   ExecWait '"$INSTDIR\MSAccessTrustedLocations.exe" /ADD "$INSTDIR" 0 "M314 Apps Location"'
   
-  ExecShell "open" "$INSTDIR\M314${M314_NAME}_Readme.txt" 
   
   ;SetDetailsPrint listonly
   DetailPrint ""
   DetailPrint "Databasen ${PRODUCT_NAME} er ferdig installert. Du kan naa aapne databasen paa nytt!"
   ;SetDetailsPrint none
+  
+  ExecShellWait "open" "$INSTDIR\M314${M314_NAME}_Readme.txt" 
   
   ;IfSilent 0 +2
 	;MessageBox MB_OK|MB_ICONINFORMATION "Databasen ${PRODUCT_NAME} er ferdig installert. Du kan naa aapne databasen paa nytt!"
