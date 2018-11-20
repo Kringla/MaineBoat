@@ -1,9 +1,12 @@
-Dette er M314PMS database, versjon x.x.x
+Dette er M314PMS database, versjon 1.1.3
+*************************************************
+
+NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <5> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
+
 *************************************************
 Følgende er endret fra forrige versjon:
 
 1.	Gått over til 'norsk' datoangivelse
-2.	NB! Alle klokkeslett MÅ skrives i formatet hh:mm:ss, dvs tosifrete timer, minutter OG SEKUNDER adskilt av kolon. Slurving gir feilmeldig!
 
 *************************************************
 
