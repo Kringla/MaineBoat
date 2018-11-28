@@ -122,9 +122,7 @@ RequestExecutionLevel admin
 ; set up background image
 ; uses BgImage plugin
  
- Function .onInit
-  !insertmacro MUI_LANGDLL_DISPLAY
-FunctionEnd
+ 
 
 Function un.onInit
   !insertmacro MUI_UNGETLANGUAGE
@@ -137,6 +135,7 @@ Function .onGUIInit
  
 	BgImage::SetBg /NOUNLOAD /FILLSCREEN $PLUGINSDIR\1.bmp
 	BgImage::Redraw /NOUNLOAD
+	
 FunctionEnd
  
 Function .onGUIEnd
@@ -285,7 +284,49 @@ exit:
  
 FunctionEnd
 
+Function InstallSqlClient
 
+  StrCpy $R0 "$TEMP\sqlncli_amd64.msi"
+  StrCpy $R1 "http://m314alta.org/installs/sqlncli_amd64.msi"
+    
+  IfFileExists $SYSDIR\sqlncli10.dll endsql
+  DetailPrint "sqlncli10.dll er ikke installert!"
+  ;MessageBox MB_OK "sqlncli10.dll not exist!"
+  
+  ;IfFileExists $R0 instSql
+  
+  ;MessageBox MB_OK "sqlncli_amd64.msi not exist, downloading! "
+  DetailPrint "Laster ned sqlncli_amd64.msi..."
+  NSISdl::download http://m314alta.org/installs/sqlncli_amd64.msi $R0
+  Pop $0 ; "success" or a error code
+  StrCmp $0 "success" instSql
+  
+  MessageBox MB_OK "Kunne ikke laste ned filen fra $R1. Feilkode: $0"
+  Goto insterror
+
+instSql:
+  DetailPrint "Installerer sqlncli_amd64.msi..."
+  ;MessageBox MB_OK "Installerer sqlncli_amd64.msi..."
+  ;SetOutPath $TEMP
+  ;ExecWait 'msiexec.exe /i $R0 /qn /norestart IACCEPTSQLNCLILICENSETERMS=YES' $0
+  ExecWait 'msiexec.exe /i $R0' $0
+  StrCmp $0 "0" endsql
+  MessageBox MB_OK "Kunne ikke installere $R0. Feilkode: $0"
+  
+insterror:
+ Quit
+ 
+endsql:	
+  ;MessageBox MB_OK "InstallSqlClient complete successfully!"
+  ;sqlncli10.dll
+  ;sqlncli_amd64.msi  
+
+FunctionEnd
+
+Function .onInit
+  !insertmacro MUI_LANGDLL_DISPLAY
+	;Call InstallSqlClient
+FunctionEnd
 
 ; beginning (invisible) section
 Section
@@ -327,6 +368,9 @@ Section
   ;Uninstaller
   WriteUninstaller "${uninstaller}"
   
+  ;Sql Native Client
+  Call InstallSqlClient
+  
   ;Auto Updater
   Call SetInstallUpdate
   
@@ -343,6 +387,8 @@ Section
   ;SetDetailsPrint none
   
   ExecShellWait "open" "$INSTDIR\M314${M314_NAME}_Readme.txt" 
+  
+  ExecShell "open" "$INSTDIR\M314${M314_NAME}.accde"
   
   ;IfSilent 0 +2
 	;MessageBox MB_OK|MB_ICONINFORMATION "Databasen ${PRODUCT_NAME} er ferdig installert. Du kan naa aapne databasen paa nytt!"
