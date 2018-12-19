@@ -6,7 +6,6 @@ Trinnene (?)
 5.	Beskjed til bruker om at installasjon starter.
 6.	Kill applikasjonen. Avinstaller applikasjonen
 7.	Sjekk at .msi for SQL Native Cl 10 finnes. Hvis ikke last ned og installer.
-8.	Last ned ny versjon av applikasjon med readme text.
 9.	Installer applikasjon
 10.	Åpne readme text.
 12. Når readme text lukkes, åpnes applikasjon

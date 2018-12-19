@@ -338,8 +338,6 @@ Section
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
   
-
-  
   ;WriteRegStr HKLM "${PRODUCT_REGKEY}" "Install_Dir" "$INSTDIR"
      
 ; any application-specific files
