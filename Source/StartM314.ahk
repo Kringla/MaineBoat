@@ -87,7 +87,7 @@ Return
 Return
 
 #8::
-	RunAndLogonIfExist("M314AdminRep.accde", "105881_cn37809", "M314Alta", "M314AdminRepSetup", "NB! Du kan ikke legge til, endre eller slette noe, kun lese og skrive ut!")
+	RunAndLogonIfExist("M314Admin.accde", "105881_kr28513", "Maine1953", "M314AdminSetup", "")
 Return
 
 #1::
