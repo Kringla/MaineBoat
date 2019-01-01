@@ -1,4 +1,4 @@
-﻿Dette er M314ADMIN database, versjon 2.5.0
+﻿Dette er M314ADMIN database, versjon 2.5.3
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -15,10 +15,11 @@ Følgende er endret fra forrige versjon:
 6.	SQL Native Client 10 (sqlncli_amd64.msi) som er nødvendig, installeres om ikke den eksisterer. (versjon 2.4.3)
 7.	Fjernet deling med 0 i Kompetanseberegningsrutine. (versjon 2.4.4)
 8.	Kompetanse håndtering endret. Hva en person er kvalifisert til avgjøres av systemet, avhengig av hvilke kompetanseelementer en person har fått godkjent. For å være "førstereis" ('KvalSeil'), må noen få, enkle kvalifikasjoner sjekkes ut.
-	Håndteringen av kompetanse er ikke ferdigstilt, men databasen fungerer ellers som tidligere. (versjon 2.5.1 og 2.5.0)
+	Håndteringen av kompetanse er ikke ferdigstilt, men databasen fungerer ellers som tidligere. (versjon 2.5.1 og 2.5.0)	
+9.	Innført "Begrenset tilgang", avhengig av hvem som logger seg på! Overflødiggjør egen databaseapp for dette formålet! (versjon 2.5.2)
 
 NYTT:
-9.	Innført "Begrenset tilgang", avhengig av hvem som logger seg på! Overflødiggjør egen databaseapp for dette formålet!
+10.	Bedret søkealgoritme på medlemsnummer. Automatisk setting av dato for innmelding. Fjerne feil som ga feilmelding i Medlemsform.
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
