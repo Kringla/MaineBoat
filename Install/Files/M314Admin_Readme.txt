@@ -17,9 +17,11 @@ Følgende er endret fra forrige versjon:
 8.	Kompetanse håndtering endret. Hva en person er kvalifisert til avgjøres av systemet, avhengig av hvilke kompetanseelementer en person har fått godkjent. For å være "førstereis" ('KvalSeil'), må noen få, enkle kvalifikasjoner sjekkes ut.
 	Håndteringen av kompetanse er ikke ferdigstilt, men databasen fungerer ellers som tidligere. (versjon 2.5.1 og 2.5.0)	
 9.	Innført "Begrenset tilgang", avhengig av hvem som logger seg på! Overflødiggjør egen databaseapp for dette formålet! (versjon 2.5.2)
+10.	Bedret søkealgoritme på medlemsnummer. Automatisk setting av dato og innmeldingsnummer ved innmelding. Fjernet feil som ga feilmelding om "kontroll som har fokus" i Medlemsform. Alle medlemsnummer låst i alle skjema - kun automatisk generering tillatt. (versjon 2.5.3)
+
 
 NYTT:
-10.	Bedret søkealgoritme på medlemsnummer. Automatisk setting av dato og innmeldingsnummer ved innmelding. Fjernet feil som ga feilmelding om "kontroll som har fokus" i Medlemsform. Alle medlemsnummer låst i alle skjema - kun automatisk generering tillatt.
+11. Kompetansehåndteringsalgoritmer sluttført. Bilag til sjefens ordrebok kap 4.08 lagt inn.
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
