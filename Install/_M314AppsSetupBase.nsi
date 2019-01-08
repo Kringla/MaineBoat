@@ -83,7 +83,7 @@ OutFile "${SETUP_FILEBASE}.exe"
 ;SilentInstall normal
  
 InstallDir "${defaultInstallDir}"
-InstallDirRegKey HKLM "${PRODUCT_REGKEY}" "${PRODUCT_NAME}"
+InstallDirRegKey HKCU "${PRODUCT_REGKEY}" "${PRODUCT_NAME}"
  
 
 ;LANGUAGE 
@@ -114,7 +114,7 @@ AutoCloseWindow false
 ShowInstDetails show
  
 ; Request application privileges for Windows Vista+
-RequestExecutionLevel admin
+RequestExecutionLevel user
 
 
 !ifdef screenimage
@@ -166,9 +166,9 @@ Function SetInstallUpdate
 
   SetRegView 64
   
-  WriteRegStr HKLM ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallTime' '$0.$1.$2 $4:$5:$6'
+  WriteRegStr HKCU ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallTime' '$0.$1.$2 $4:$5:$6'
   
-  WriteRegStr HKLM ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallUrl' ${AUTOUPDATE_URL}
+  WriteRegStr HKCU ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallUrl' ${AUTOUPDATE_URL}
   
     DetailPrint "SetInstallUpdate reg values"
 FunctionEnd
@@ -338,7 +338,7 @@ Section
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
   
-  ;WriteRegStr HKLM "${PRODUCT_REGKEY}" "Install_Dir" "$INSTDIR"
+  ;WriteRegStr HKCU "${PRODUCT_REGKEY}" "Install_Dir" "$INSTDIR"
      
 ; any application-specific files
 ;!ifdef files
@@ -357,11 +357,11 @@ Section
   File /a "Files\M314${M314_NAME}_Readme.txt"
   
   ; write uninstall strings
-  WriteRegStr HKLM "${uninstkey}" "DisplayName" "${PRODUCT_NAME}"
-  WriteRegStr HKLM "${uninstkey}" "UninstallString" '"$INSTDIR\${uninstaller}"'
-  WriteRegStr HKLM "${uninstkey}" "InstallLocation" "$INSTDIR"
-  WriteRegStr HKLM "${uninstkey}" "DisplayIcon" "$INSTDIR\App.ico, 0"
-  WriteRegStr HKLM "${uninstkey}" "Publisher" "${PUBLISHER}"
+  WriteRegStr HKCU "${uninstkey}" "DisplayName" "${PRODUCT_NAME}"
+  WriteRegStr HKCU "${uninstkey}" "UninstallString" '"$INSTDIR\${uninstaller}"'
+  WriteRegStr HKCU "${uninstkey}" "InstallLocation" "$INSTDIR"
+  WriteRegStr HKCU "${uninstkey}" "DisplayIcon" "$INSTDIR\App.ico, 0"
+  WriteRegStr HKCU "${uninstkey}" "Publisher" "${PUBLISHER}"
   
   ;Uninstaller
   WriteUninstaller "${uninstaller}"
@@ -443,7 +443,7 @@ Section "Uninstall"
   Delete "$INSTDIR\*.laccdb"
   
   ;Delete uninstall info from registry
-  DeleteRegKey HKLM "${uninstkey}"
+  DeleteRegKey HKCU "${uninstkey}"
   
   ;Delete uninstaller
   Delete "$INSTDIR\${uninstaller}"
@@ -452,6 +452,8 @@ Section "Uninstall"
 ; !include "${unfiles}"
 ; !endif
   Call un.DeleteFiles
+  
+  Delete "$INSTDIR\M314${M314_NAME}_Readme.txt"
 
 !ifdef licensefile
 Delete "$INSTDIR\${licensefile}"
@@ -487,7 +489,7 @@ Delete "$INSTDIR\${notefile}"
 done:
   
   ;Delete App Key
-  ;DeleteRegKey HKLM ${PRODUCT_REGKEY}
+  ;DeleteRegKey HKCU ${PRODUCT_REGKEY}
 
   ;SetDetailsPrint listonly
   DetailPrint "${PRODUCT_NAME} avinstallasjon ferdig"
@@ -496,7 +498,7 @@ done:
   ;SetAutoClose true
 
   
-  ;DeleteRegKey HKLM "${PRODUCT_REGKEY}"
+  ;DeleteRegKey HKCU "${PRODUCT_REGKEY}"
  
   ;Delete "${startmenu}\*.*"
   ;Delete "${startmenu}"
