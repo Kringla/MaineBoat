@@ -114,7 +114,13 @@ AutoCloseWindow false
 ShowInstDetails show
  
 ; Request application privileges for Windows Vista+
-RequestExecutionLevel user
+; RequestExecutionLevel none|user|highest|admin
+; Specifies the requested execution level for Windows Vista and higher. The value is embedded in the installer and uninstaller's XML manifest and tells Windows which privilege level the installer requires. user requests the user's normal level with no administrative privileges. highest will request the highest execution level available for the current user and will cause Windows to prompt the user to verify privilege escalation if they are a member of the administrators group. The prompt might request for the user's password. admin, which is also the default, requests administrator level and will cause Windows to prompt the user as well. Specifying none will keep the manifest empty and let Windows decide which execution level is required. Windows automatically identifies NSIS installers and decides administrator privileges are required. Because of this, none and admin have virtually the same effect.
+
+RequestExecutionLevel highest
+
+
+
 
 
 !ifdef screenimage
@@ -374,8 +380,8 @@ Section
   
   ;;Startup with windows shortcut
   CreateShortCut "$SMPROGRAMS\Startup\StartM314.lnk" "$INSTDIR\StartM314.exe" "" "StartM314.exe" 0
-     
   Exec "$INSTDIR\StartM314.exe" 
+  
   ExecWait '"$INSTDIR\MSAccessTrustedLocations.exe" /ADD "$INSTDIR" 0 "M314 Apps Location"'
   
   
