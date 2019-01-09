@@ -83,7 +83,7 @@ OutFile "${SETUP_FILEBASE}.exe"
 ;SilentInstall normal
  
 InstallDir "${defaultInstallDir}"
-InstallDirRegKey HKLM "${PRODUCT_REGKEY}" "${PRODUCT_NAME}"
+InstallDirRegKey HKCU "${PRODUCT_REGKEY}" "${PRODUCT_NAME}"
  
 
 ;LANGUAGE 
@@ -114,7 +114,13 @@ AutoCloseWindow false
 ShowInstDetails show
  
 ; Request application privileges for Windows Vista+
-RequestExecutionLevel admin
+; RequestExecutionLevel none|user|highest|admin
+; Specifies the requested execution level for Windows Vista and higher. The value is embedded in the installer and uninstaller's XML manifest and tells Windows which privilege level the installer requires. user requests the user's normal level with no administrative privileges. highest will request the highest execution level available for the current user and will cause Windows to prompt the user to verify privilege escalation if they are a member of the administrators group. The prompt might request for the user's password. admin, which is also the default, requests administrator level and will cause Windows to prompt the user as well. Specifying none will keep the manifest empty and let Windows decide which execution level is required. Windows automatically identifies NSIS installers and decides administrator privileges are required. Because of this, none and admin have virtually the same effect.
+
+RequestExecutionLevel highest
+
+
+
 
 
 !ifdef screenimage
@@ -166,9 +172,9 @@ Function SetInstallUpdate
 
   SetRegView 64
   
-  WriteRegStr HKLM ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallTime' '$0.$1.$2 $4:$5:$6'
+  WriteRegStr HKCU ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallTime' '$0.$1.$2 $4:$5:$6'
   
-  WriteRegStr HKLM ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallUrl' ${AUTOUPDATE_URL}
+  WriteRegStr HKCU ${PRODUCT_REGKEY} '${SETUP_FILEBASE}InstallUrl' ${AUTOUPDATE_URL}
   
     DetailPrint "SetInstallUpdate reg values"
 FunctionEnd
@@ -338,7 +344,7 @@ Section
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
   
-  ;WriteRegStr HKLM "${PRODUCT_REGKEY}" "Install_Dir" "$INSTDIR"
+  ;WriteRegStr HKCU "${PRODUCT_REGKEY}" "Install_Dir" "$INSTDIR"
      
 ; any application-specific files
 ;!ifdef files
@@ -357,11 +363,11 @@ Section
   File /a "Files\M314${M314_NAME}_Readme.txt"
   
   ; write uninstall strings
-  WriteRegStr HKLM "${uninstkey}" "DisplayName" "${PRODUCT_NAME}"
-  WriteRegStr HKLM "${uninstkey}" "UninstallString" '"$INSTDIR\${uninstaller}"'
-  WriteRegStr HKLM "${uninstkey}" "InstallLocation" "$INSTDIR"
-  WriteRegStr HKLM "${uninstkey}" "DisplayIcon" "$INSTDIR\App.ico, 0"
-  WriteRegStr HKLM "${uninstkey}" "Publisher" "${PUBLISHER}"
+  WriteRegStr HKCU "${uninstkey}" "DisplayName" "${PRODUCT_NAME}"
+  WriteRegStr HKCU "${uninstkey}" "UninstallString" '"$INSTDIR\${uninstaller}"'
+  WriteRegStr HKCU "${uninstkey}" "InstallLocation" "$INSTDIR"
+  WriteRegStr HKCU "${uninstkey}" "DisplayIcon" "$INSTDIR\App.ico, 0"
+  WriteRegStr HKCU "${uninstkey}" "Publisher" "${PUBLISHER}"
   
   ;Uninstaller
   WriteUninstaller "${uninstaller}"
@@ -374,8 +380,8 @@ Section
   
   ;;Startup with windows shortcut
   CreateShortCut "$SMPROGRAMS\Startup\StartM314.lnk" "$INSTDIR\StartM314.exe" "" "StartM314.exe" 0
-     
   Exec "$INSTDIR\StartM314.exe" 
+  
   ExecWait '"$INSTDIR\MSAccessTrustedLocations.exe" /ADD "$INSTDIR" 0 "M314 Apps Location"'
   
   
@@ -443,7 +449,7 @@ Section "Uninstall"
   Delete "$INSTDIR\*.laccdb"
   
   ;Delete uninstall info from registry
-  DeleteRegKey HKLM "${uninstkey}"
+  DeleteRegKey HKCU "${uninstkey}"
   
   ;Delete uninstaller
   Delete "$INSTDIR\${uninstaller}"
@@ -452,6 +458,8 @@ Section "Uninstall"
 ; !include "${unfiles}"
 ; !endif
   Call un.DeleteFiles
+  
+  Delete "$INSTDIR\M314${M314_NAME}_Readme.txt"
 
 !ifdef licensefile
 Delete "$INSTDIR\${licensefile}"
@@ -487,7 +495,7 @@ Delete "$INSTDIR\${notefile}"
 done:
   
   ;Delete App Key
-  ;DeleteRegKey HKLM ${PRODUCT_REGKEY}
+  ;DeleteRegKey HKCU ${PRODUCT_REGKEY}
 
   ;SetDetailsPrint listonly
   DetailPrint "${PRODUCT_NAME} avinstallasjon ferdig"
@@ -496,7 +504,7 @@ done:
   ;SetAutoClose true
 
   
-  ;DeleteRegKey HKLM "${PRODUCT_REGKEY}"
+  ;DeleteRegKey HKCU "${PRODUCT_REGKEY}"
  
   ;Delete "${startmenu}\*.*"
   ;Delete "${startmenu}"
