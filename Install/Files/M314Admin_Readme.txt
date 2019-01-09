@@ -23,6 +23,7 @@ Følgende er endret fra forrige versjon:
 NYTT:
 11. Kompetansehåndteringsalgoritmer sluttført. Bilag til sjefens ordrebok kap 4.08 lagt inn.
 12. Seilas statistikk skjema korrigert.
+13. SendTo-funksjonalitet endret med True/False
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
