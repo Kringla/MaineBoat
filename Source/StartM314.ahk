@@ -6,8 +6,27 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 RunAutoUpdater(sInstallFilename)
 {
 	SetRegView 64
+	
 	RegRead, sInstallTime, HKEY_CURRENT_USER\SOFTWARE\M314Apps, %sInstallFilename%InstallTime
 	RegRead, sInstallUrl, HKEY_CURRENT_USER\SOFTWARE\M314Apps, %sInstallFilename%InstallUrl
+	
+	if StrLen(sInstallTime) = 0
+	{
+		RegRead, sInstallTime, HKEY_LOCAL_MACHINE\SOFTWARE\M314Apps, %sInstallFilename%InstallTime
+		RegRead, sInstallUrl, HKEY_LOCAL_MACHINE\SOFTWARE\M314Apps, %sInstallFilename%InstallUrl
+	}
+	
+	if StrLen(sInstallTime) = 0
+	{
+		MsgBox, 64,, % "Kunne ikke finne " .sInstallFilename "InstallTime i registry SOFTWARE\M314Apps"
+		Return
+	}
+	
+	if StrLen(sInstallUrl) = 0
+	{
+		MsgBox, 64,, % "Kunne ikke finne " .sInstallFilename "InstallUrl i registry SOFTWARE\M314Apps"
+		Return
+	}
 	
 	;MsgBox %sInstallTime%
 	
