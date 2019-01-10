@@ -17,6 +17,7 @@ Følgende er endret fra forrige versjon:
 
 5. 	To bugs fjernet. De ga feilmelding om form som ikke kunne finnes.
 
+
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.

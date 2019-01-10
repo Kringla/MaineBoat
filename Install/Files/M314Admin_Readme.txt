@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 2.5.3
+Dette er M314ADMIN database, versjon 2.6.0
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
