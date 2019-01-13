@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 2.6.1
+Dette er M314ADMIN database, versjon 2.6.2
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -18,12 +18,12 @@ Følgende er endret fra forrige versjon:
 	Håndteringen av kompetanse er ikke ferdigstilt, men databasen fungerer ellers som tidligere. (versjon 2.5.1 og 2.5.0)	
 9.	Innført "Begrenset tilgang", avhengig av hvem som logger seg på! Overflødiggjør egen databaseapp for dette formålet! (versjon 2.5.2)
 10.	Bedret søkealgoritme på medlemsnummer. Automatisk setting av dato og innmeldingsnummer ved innmelding. Fjernet feil som ga feilmelding om "kontroll som har fokus" i Medlemsform. Alle medlemsnummer låst i alle skjema - kun automatisk generering tillatt. (versjon 2.5.3)
-11. Kompetansehåndteringsalgoritmer sluttført. Bilag til sjefens ordrebok kap 4.08 lagt inn.
-12. Seilas statistikk skjema korrigert.
-
+11. Kompetansehåndteringsalgoritmer sluttført. Bilag til sjefens ordrebok kap 4.08 lagt inn. (versjon 2.6.0)
+12. Seilas statistikk skjema korrigert. (versjon 2.6.0)
+13. Generering av Mail (SendObject-funksjonalitet) endret med True/False (versjon 2.6.1)
 
 NYTT:
-13. Generering av Mail (SendObject-funksjonalitet) endret med True/False
+Funksjonalitet for eksterne besetningsmedlemmer er lagt inn i hovedmeny (Medlems-tab)
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
