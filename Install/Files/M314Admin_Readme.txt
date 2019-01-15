@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 2.6.2
+Dette er M314ADMIN database, versjon 2.6.3
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -21,9 +21,10 @@ Følgende er endret fra forrige versjon:
 11. Kompetansehåndteringsalgoritmer sluttført. Bilag til sjefens ordrebok kap 4.08 lagt inn. (versjon 2.6.0)
 12. Seilas statistikk skjema korrigert. (versjon 2.6.0)
 13. Generering av Mail (SendObject-funksjonalitet) endret med True/False (versjon 2.6.1)
+14. Funksjonalitet for eksterne besetningsmedlemmer er lagt inn i hovedmeny (Medlems-tab) (versjon 2.6.2)
 
 NYTT:
-Funksjonalitet for eksterne besetningsmedlemmer er lagt inn i hovedmeny (Medlems-tab)
+15. Påmelding email bug fjernet
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
