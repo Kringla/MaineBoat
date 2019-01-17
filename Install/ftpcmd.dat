@@ -1,9 +1,0 @@
-open ftp.m314alta.org
-m314avix
-AMS60jwau
-cd public_html/installs
-quote pasv
-binary
-send .\M314AdminSetup.exe
-disconnect
-quit

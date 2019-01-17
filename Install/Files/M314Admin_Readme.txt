@@ -22,9 +22,11 @@ Følgende er endret fra forrige versjon:
 12. Seilas statistikk skjema korrigert. (versjon 2.6.0)
 13. Generering av Mail (SendObject-funksjonalitet) endret med True/False (versjon 2.6.1)
 14. Funksjonalitet for eksterne besetningsmedlemmer er lagt inn i hovedmeny (Medlems-tab) (versjon 2.6.2)
+15. Påmelding email bug fjernet (versjon 2.6.3)
 
 NYTT:
-15. Påmelding email bug fjernet
+16. Stambesetningsfunksjonalitet oppdatert (jf. pkt 11 over)
+17. Håndboken oppdatert. Beskrivelse av aktuelle funsjoner MÅ leses FØR en benytter funksjonaliteten. Håndboka åpnes ved å dobbelklikke "Brukerhåndbok" øverst til høyre på hovedmenyen.
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
