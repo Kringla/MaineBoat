@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 2.6.5
+Dette er M314ADMIN database, versjon 2.6.6
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -25,10 +25,10 @@ Følgende er endret fra forrige versjon:
 15. Påmelding email bug fjernet (versjon 2.6.3)
 16. Stambesetningsfunksjonalitet oppdatert (jf. pkt 11 over) (versjon 2.6.4)
 17. Oppdatering av håndboken for Admin DB pågår. Beskrivelse av aktuelle funsjoner MÅ leses FØR en benytter funksjonaliteten. Håndboka åpnes ved å dobbelklikke "Brukerhåndbok" øverst til høyre på hovedmenyen. (versjon 2.6.4)
+18. Stambesetningsfunksjonalitet oppdatert (jf. pkt 16 over) (versjon 2.6.5)
 
 NYTT:
-18. Stambesetningsfunksjonalitet oppdatert (jf. pkt 16 over)
-
+19. Endret oppslag på parkering fra Dato til Arr ID.
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
