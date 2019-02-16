@@ -13,7 +13,8 @@ Følgende er endret fra forrige versjon:
 3. Rettet køyliste pr vaktskvarter.(3.0.1)
 
 NYTT:
-4.
+4. Kosmetiske endringer.
+5. Lagt inn mulighet til å sende epost far stambesetningsskjerm
 
 *************************************************
 
