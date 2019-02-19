@@ -15,6 +15,7 @@ Følgende er endret fra forrige versjon:
 NYTT:
 4. Kosmetiske endringer.
 5. Lagt inn mulighet til å sende epost far stambesetningsskjerm
+6. Korrigert ip adresse til brukerhåndbok
 
 *************************************************
 
