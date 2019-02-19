@@ -1,0 +1,51 @@
+Option Compare Database 
+Option Explicit 
+ 
+ ' Declarations for API Functions
+Private Declare Function LoadCursorFromFile Lib "user32" _ 
+Alias "LoadCursorFromFileA" (ByVal lpFileName As String) As Long 
+Private Declare Function SetClassLong Lib "user32" Alias_ 
+"SetClassLongA" (ByVal hwnd As Long, ByVal nIndex As Long, _ 
+ByVal dwNewLong As Long) As Long 
+Private Declare Function LoadCursor Lib "user32" Alias_ 
+"LoadCursorA" (ByVal hInstance As Long, ByVal lpCursorName As Long) As Long 
+ 
+ ' Declare Windows API Constants for Windows System cursors
+Const GCW_HCURSOR = (-12) 
+Const IDC_APPSTARTING As Long = 32650& 
+Const IDC_ARROW As Long = 32512& 
+Const IDC_HAND As Long = 32649 
+Const IDC_HELP As Long = 32651 
+Const IDC_IBEAM As Long = 32513& 
+Const IDC_ICON As Long = 32641& 
+Const IDC_WAIT As Long = 32514& 
+Const IDC_UPARROW As Long = 32516& 
+Const IDC_SIZEWE As Long = 32644& 
+Const IDC_SIZENWSE As Long = 32642& 
+Const IDC_SIZENS As Long = 32645& 
+Const IDC_SIZENESW As Long = 32643& 
+Const IDC_SIZEALL As Long = 32646& 
+Const IDC_SIZE As Long = 32640& 
+Const IDC_NO As Long = 32648& 
+ 
+ ' Declare handles for cursor
+Private Const GCL_HCURSOR = (-12) 
+Private hOldCursor As Long 
+Private hNewCursor As Long 
+ 
+Private Sub Form_Load() 
+     'Load cursor
+     'Comment out code not required:
+     'Load system cursor
+    hNewCursor = LoadCursor(ByVal 0&, IDC_HAND) 
+     'Load cursor from file
+    hNewCursor = LoadCursorFromFile(CurrentProject.Path & "\cool.cur") 
+     'Load animated cursor from file
+    hNewCursor = LoadCursorFromFile(CurrentProject.Path & "\APPSTART.ani") 
+    hOldCursor = SetClassLong(Me.hwnd, GCL_HCURSOR, hNewCursor) 
+End Sub 
+ 
+Private Sub Form_Unload(Cancel As Integer) 
+     'Unload cursor
+    hOldCursor = SetClassLong(hwnd, GCL_HCURSOR, hOldCursor) 
+End Sub 

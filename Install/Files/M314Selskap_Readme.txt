@@ -1,4 +1,4 @@
-﻿Dette er M314SELSKAP database, versjon 1.3.1
+﻿Dette er M314SELSKAP database, versjon 1.3.3
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <1> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
@@ -15,9 +15,11 @@ Følgende er endret fra forrige versjon:
 
 4.	SQL Native Client 10 (sqlncli_amd64.msi) som er nødvendig, installeres om ikke den eksisterer. (versjon 1.3.0)
 
-5. 	To bugs fjernet. De ga feilmelding om form som ikke kunne finnes.
+5. 	To bugs fjernet. De ga feilmelding om form som ikke kunne finnes. versjon 1.3.1 og 1.3.2)
 
+NYTT
 
+6. Feil KundeID ved registrering av første gangs arrangement for ny kunde. Rettet.
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.
