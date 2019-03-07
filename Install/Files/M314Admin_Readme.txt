@@ -16,7 +16,7 @@ Følgende er endret fra forrige versjon:
 6. Korrigert ip adresse til brukerhåndbok. (3.0.2)
 
 NYTT:
-7. 
+7. kUN EN pRØVE
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
