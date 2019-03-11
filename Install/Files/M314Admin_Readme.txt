@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 3.0.3
+Dette er M314ADMIN database, versjon 3.1.0
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -16,7 +16,8 @@ Følgende er endret fra forrige versjon:
 6. Korrigert ip adresse til brukerhåndbok. (3.0.2)
 
 NYTT:
-7. kUN EN pRØVE
+7. Kopling til selskapsdatabases arrangementer
+8. Utskriftsmulighet av årets aktiviteter
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
