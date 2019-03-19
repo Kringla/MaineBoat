@@ -1,0 +1,8 @@
+[ODBC]
+DRIVER=SQL Server
+UID=105881_mc66918
+PWD=Maine1953
+DATABASE=105881-admintest
+APP=Microsoft Office 2016
+SERVER=admintest-105881.mssql.stwcp.net
+Description=AdminTest Cloud
