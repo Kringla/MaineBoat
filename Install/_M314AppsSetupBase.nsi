@@ -303,7 +303,8 @@ Function InstallSqlClient
   
   ;MessageBox MB_OK "sqlncli_amd64.msi not exist, downloading! "
   DetailPrint "Laster ned sqlncli_amd64.msi..."
-  NSISdl::download http://m314alta.org/installs/sqlncli_amd64.msi $R0
+  NSISdl::download http://m314alta.org/installs/sqlncli_amd64.msi $R0 
+  
   Pop $0 ; "success" or a error code
   StrCmp $0 "success" instSql
   
