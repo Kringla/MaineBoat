@@ -1,8 +1,0 @@
-[ODBC]
-DRIVER=SQL Server
-UID=105881_ff92174
-PWD=Maine1953
-DATABASE=105881-pmstest
-APP=Microsoft Office 2016
-SERVER=pmstest-105881.mssql.stwcp.net
-Description=PMSTest Cloud

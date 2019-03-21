@@ -1,8 +1,0 @@
-[ODBC]
-DRIVER=SQL Server
-UID=105881_sf31926
-PWD=Maine1953
-DATABASE=105881-sposortest
-APP=Microsoft Office 2016
-SERVER=sponsortest-105881.mssql.stwcp.net
-Description=SponsorTest Cloud

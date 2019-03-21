@@ -1,8 +1,0 @@
-[ODBC]
-DRIVER=SQL Server
-UID=105881_lt85170
-Network=DBMSSOCN
-WSID=ZEVSLAP
-APP=Microsoft Office 2016
-SERVER=selskap-105881.mssql.stwcp.net
-Description=Selskap Cloud
