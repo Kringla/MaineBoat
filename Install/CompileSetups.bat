@@ -3,8 +3,8 @@
 "C:\Program Files (x86)\NSIS\makensis.exe" M314SponsorSetup.nsi
 "C:\Program Files (x86)\NSIS\makensis.exe" M314SelskapSetup.nsi
 
-"C:\Program Files (x86)\NSIS\makensis.exe" M314AdminRepSetup.nsi
-rem "C:\Program Files (x86)\NSIS\makensis.exe" M314PMSRepSetup.nsi
-rem "C:\Program Files (x86)\NSIS\makensis.exe" M314SponsorRepSetup.nsi
-rem "C:\Program Files (x86)\NSIS\makensis.exe" M314SelskapRepSetup.nsi
+"C:\Program Files (x86)\NSIS\makensis.exe" M314AdminTestSetup.nsi
+"C:\Program Files (x86)\NSIS\makensis.exe" M314PMSTestSetup.nsi
+"C:\Program Files (x86)\NSIS\makensis.exe" M314SponsorTestSetup.nsi
+"C:\Program Files (x86)\NSIS\makensis.exe" M314SelskapTestSetup.nsi
 REM pause
