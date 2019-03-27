@@ -16,7 +16,7 @@ Følgende er endret fra forrige versjon:
 6. Korrigert ip adresse til brukerhåndbok. (3.0.2)
 
 NYTT:
-7. Kopling til selskapsdatabases arrangementer
+7. Kopling til selskapsdatabases arrangementer (De er overført til Admin db)
 8. Utskriftsmulighet av årets aktiviteter
 *************************************************
 
