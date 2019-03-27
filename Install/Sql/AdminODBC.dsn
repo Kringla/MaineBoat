@@ -1,8 +1,0 @@
-[ODBC]
-DRIVER=SQL Server
-UID=105881_kr28513
-PWD=Maine1953
-DATABASE=105881-admin
-APP=Microsoft Office 2016
-SERVER=admin-105881.mylittleadmin.mssql.stwcp.net
-Description=Admin Cloud

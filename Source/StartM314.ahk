@@ -97,8 +97,28 @@ RunAndLogonIfExist(sFilename, sUsername, sPassword, sSetupFile, sMessage)
 	}
 }
 
+#1::
+	RunAndLogonIfExist("M314Selskap.accde", "105881_lt85170", "Maine1953", "M314SelskapSetup", "")
+Return
+
+#2::
+	RunAndLogonIfExist("M314SelskapTest.accde", "105881_od92908", "Maine1953", "M314SelskapTestSetup", "")
+Return
+
+#3::
+	RunAndLogonIfExist("M314Sponsor.accde", "105881_da56307", "Maine1953", "M314SponsorSetup", "")
+Return
+
+#4::
+	RunAndLogonIfExist("M314SponsorTest.accde", "105881_qi75679", "Maine1953", "M314SponsorTestSetup", "")
+Return
+
 #5::
 	RunAndLogonIfExist("M314PMS.accde", "105881_sc66800", "Maine1953", "M314PMSSetup", "")
+Return
+
+#6::
+	RunAndLogonIfExist("M314PMSTest.accde", "105881_ff92174", "Maine1953", "M314PMSTestSetup", "")
 Return
 
 #7::
@@ -106,15 +126,10 @@ Return
 Return
 
 #8::
-	RunAndLogonIfExist("M314Admin.accde", "105881_kr28513", "Maine1953", "M314AdminSetup", "")
+	RunAndLogonIfExist("M314AdminTest.accde", "105881_mc66918", "Maine1953", "M314AdminTestSetup", "")
 Return
 
-#1::
-	RunAndLogonIfExist("M314Selskap.accde", "105881_lt85170", "Maine1953", "M314SelskapSetup", "")
-Return
 
-#3::
-	RunAndLogonIfExist("M314Sponsor.accde", "105881_da56307", "Maine1953", "M314SponsorSetup", "")
-Return
+
 
 
