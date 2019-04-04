@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 3.2.0
+Dette er M314ADMIN database, versjon 3.3.0
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -15,9 +15,10 @@ Følgende er endret tidligere:
 7. Kopling til selskapsdatabases arrangementer (De er overført til Admin db) (3.1.0)
 8. Utskriftsmulighet av årets aktiviteter (3.1.0)
 9. Bug rundt cmdEffekter rettet(3.1.0)
+10. Koblet til ny database server. Ingen endring i funksjonalitet/data (3.2.0)
 
 NYTT:
-10. Koblet til ny database server. Ingen endring i funksjonalitet/data
+11. Ny utforming av rapportvalg (listboks)
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
