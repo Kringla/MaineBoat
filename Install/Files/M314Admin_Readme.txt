@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 3.5.0
+Dette er M314ADMIN database, versjon 3.5.1
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -19,10 +19,11 @@ Følgende er endret tidligere:
 11. Ny utforming av rapportvalg (listboks) (3.3.0)
 12. Nye stambesetningsrapporter (3.3.1)
 13. Tidligere medlemsskjema delt i fler skjema for å bedre responstid. (3.4.0)
+14. Ny rapport for årsprogram (uten selskaper) (3.5.0)
+15. Søkemulighet på epost adresse (3.5.0)
 
 NYTT:
-14. Ny rapport for årsprogram (uten selskaper)
-15. Søkemulighet på epost adresse
+16. Rettet epostadresse for "sersjanten"
 
 *************************************************
 
