@@ -11,6 +11,7 @@ Følgende er endret tidligere:
 NYTT
 
 3.	Koblet til ny database server. Ingen endring i funksjonalitet/data
+
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.

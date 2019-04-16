@@ -1,4 +1,4 @@
-﻿Dette er M314PMS database, versjon 2.0.2
+﻿Dette er M314PMS database, versjon 2.1.0
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <5> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
@@ -15,9 +15,10 @@ Følgende er endret tidligere:
 7. 	Feil ved angivelse av ny jobb rettet. (1.3.0)
 8.	Koblet til ny database server. Ingen endring i funksjonalitet/data (2.0)
 9.	Fjernet bug i frmJobbAnsvarScr subform (2.0.1)
+10. La til mulighet for å opprette jobb i fra Komponent tre jobbliste (2.0.2)
 
 NYTT:
-10. La til mulighet for å opprette jobb i fra Komponent tre jobbliste
+11. Skiftet til hurtigere server.
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.
