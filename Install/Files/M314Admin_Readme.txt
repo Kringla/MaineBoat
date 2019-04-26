@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 3.5.1
+Dette er M314ADMIN database, versjon 3.6.4 - 26.04.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -21,13 +21,15 @@ Følgende er endret tidligere:
 13. Tidligere medlemsskjema delt i fler skjema for å bedre responstid. (3.4.0)
 14. Ny rapport for årsprogram (uten selskaper) (3.5.0)
 15. Søkemulighet på epost adresse (3.5.0)
+16. Rettet epostadresse for "sersjanten" (3.5.1)
+17. Koblet til ny database server. (3.6.0)
+18. Nye person-rapporter vedr effekter og kompetanse. (3.6.0)
+19. Bug fix på valg av medlem (3.6.1)
+20. Bug fix på gjester (3.6.2 - 25.04.19)
+21. Bug fix kompetansesignering (3.6.2 - 25.04.19)
 
 NYTT:
-16. Rettet epostadresse for "sersjanten"
-
+22. 
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
-
-
-
