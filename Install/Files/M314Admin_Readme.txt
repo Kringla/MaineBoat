@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 3.6.4 - 26.04.19
+Dette er M314ADMIN database, versjon 3.7.0 - 29.04.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -27,9 +27,10 @@ Følgende er endret tidligere:
 19. Bug fix på valg av medlem (3.6.1)
 20. Bug fix på gjester (3.6.2 - 25.04.19)
 21. Bug fix kompetansesignering (3.6.2 - 25.04.19)
+22. Muliggjorde søk eksterne (3.6.3 -26.04.19)
 
 NYTT:
-22. 
+23. Ny funksjonalitet. Kompetansekvittering kan gjøres for alle deltagere i samme skjermbilde.
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
