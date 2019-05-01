@@ -1,4 +1,4 @@
-﻿Dette er M314PMS database, versjon 2.3.0, 27.04.19
+﻿Dette er M314PMS database, versjon 2.3.0, 30.04.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <5> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
@@ -21,6 +21,7 @@ Følgende er endret tidligere:
 
 NYTT:
 13. Forenklet Jobblisting for å øke hastighet
+14. Økt fontstørrelse på Komponent treet
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.
