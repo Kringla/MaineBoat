@@ -11,7 +11,7 @@ Følgende er endret tidligere:
 3.	Koblet til ny database server. Ingen endring i funksjonalitet/data (2.0)
 4. 	Bug fix interne arrangementer (2.1)
 5. 	Koblet mot arrangementer/seilaser(2.1)
-6. 	Nye aktiviutetsrapporter (2.1)
+6. 	Nye aktivitetsrapporter (2.1)
 7. 	Ny meny (2.1)
 8. Rettet epostadresse for "sersjanten" (2.2.1)
 
