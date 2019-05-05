@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 3.7.3 - 02.05.19
+Dette er M314ADMIN database, versjon 3.7.4 - 03.05.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -31,9 +31,10 @@ Følgende er endret tidligere:
 23. Ny funksjonalitet. Kompetansekvittering kan gjøres for alle deltagere i samme skjermbilde. (3.7.0 - 29.04.19)
 24. Bugs rettet ifm kompetanse/stilling (3.7.1 - 30.04.19)
 25. Valg av medlemmer endret (3.7.2 - 01.05.19)
+26. Ustabilt  generalrulle-, kvalifikasjons- og påmeldingsbilde endret (3.7.3 - 02.05.19) 
 
 NYTT:
-26. Ustabilt  generalrulle-, kvalifikasjons- og påmeldingsbilde endret
 *************************************************
+27. Fjerne farger fra generalrulle for å øke hastigeten med 40% (3.7.4 - 03.05.19)
 
 Når du har lukket denne filen, starter databasen automatisk. 

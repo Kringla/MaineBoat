@@ -13,10 +13,11 @@ Følgende er endret tidligere:
 5. 	Koblet mot arrangementer/seilaser(2.1)
 6. 	Nye aktivitetsrapporter (2.1)
 7. 	Ny meny (2.1)
-8. Rettet epostadresse for "sersjanten" (2.2.1)
+8. Rettet epostadresse for "sersjanten" (2.1.1)
 
 NYTT
 9. Byttet til raskere server
+10. Endret klokkerangivelsesfelt
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.
