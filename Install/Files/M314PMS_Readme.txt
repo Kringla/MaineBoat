@@ -1,4 +1,4 @@
-﻿Dette er M314PMS database, versjon 2.3.0, 30.04.19
+﻿Dette er M314PMS database, versjon 2.4.0, 07.05.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <5> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
@@ -18,10 +18,11 @@ Følgende er endret tidligere:
 10. La til mulighet for å opprette jobb i fra Komponent tre jobbliste (2.0.2)
 11. Skiftet til hurtigere server. (2.1.0, 19.04.19)
 12. Innført egen funksjonalitet for daglige rutiner. (2.2.0, 24.04.19)
+13. Forenklet Jobblisting for å øke hastighet (2.3.0, 30.04.19)
+14. Økt fontstørrelse på Komponent treet (2.3.0, 30.04.19)
 
 NYTT:
-13. Forenklet Jobblisting for å øke hastighet
-14. Økt fontstørrelse på Komponent treet
+15. Ny funksjonalitet - Sjekklister lagt inn (2.4.0, 07.05.19)
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.
