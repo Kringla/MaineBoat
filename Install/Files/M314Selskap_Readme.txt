@@ -1,4 +1,4 @@
-﻿Dette er M314SELSKAP database, versjon 2.1.2
+﻿Dette er M314SELSKAP database, versjon 2.2.0 14.05.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <1> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
@@ -14,10 +14,12 @@ Følgende er endret tidligere:
 6. 	Nye aktivitetsrapporter (2.1)
 7. 	Ny meny (2.1)
 8. Rettet epostadresse for "sersjanten" (2.1.1)
+9. Byttet til raskere server (2.1.2)
+10. Endret klokkerangivelsesfelt (2.1.2)
 
-NYTT
-9. Byttet til raskere server
-10. Endret klokkerangivelsesfelt
+NYTT:
+11. Bedret rapportinnhold på selskapsliste (2.2.0 14.05.19)
+
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.
