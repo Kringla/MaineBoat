@@ -1,8 +1,8 @@
-Call M314AdminRepSetup.bat
+Call M314AdminTestSetup.bat
 Call M314AdminSetup.bat
-rem Call M314PMSRepSetup.bat
+Call M314PMSTestSetup.bat
 Call M314PMSSetup.bat
-rem Call M314SelskapRepSetup.bat
+Call M314SelskapTestSetup.bat
 Call M314SelskapSetup.bat
-rem Call M314SponsorRepSetup.bat
+Call M314PVSSetup.bat
 Call M314SponsorSetup.bat

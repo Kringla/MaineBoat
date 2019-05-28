@@ -1,7 +1,7 @@
 ﻿Dette er M314PMS database, versjon 2.5.0, 13.05.19
 *************************************************
 
-NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <5> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
+NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <4> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
 
 *************************************************
 Følgende er endret tidligere:
@@ -23,7 +23,7 @@ Følgende er endret tidligere:
 15. Ny funksjonalitet - Sjekklister lagt inn (2.4.0, 07.05.19)
 
 NYTT:
-16. Nytt nummerertingssystem for strukturer.(2.5.0, 13.05.19)
+Databasen er erstattet av M314 PVS! Lukk og last ned ny database fra http://m314alta.org/installs/m314altaPVSsetup.exe
 
 *************************************************
 
