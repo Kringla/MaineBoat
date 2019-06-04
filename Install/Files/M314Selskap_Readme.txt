@@ -20,7 +20,7 @@ Følgende er endret tidligere:
 12. Fjernet Bug. Lagt til Matpris, som må settes i standarder. Kuvertpris blir laget som sum kaffe og matpris. (2.3.0 27.05.19)
 
 NYTT:
-13. Endret overskrifter. Muliggjort endring av Meny pris (Tidl Matpris) i Selskapsdetalj-bildet. (2.3.1 29.05.19)
+13. Endret overskrifter. Muliggjort endring av Meny pris (Tidl Matpris) i Selskapsdetalj-bildet. Innført mulighet for leie av hele fartøyet, Endret kontantoppgjør til VIPPS. (2.3.1/2 31.05.19)
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk.

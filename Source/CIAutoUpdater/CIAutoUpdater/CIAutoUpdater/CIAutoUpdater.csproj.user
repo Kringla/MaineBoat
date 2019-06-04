@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <StartArguments>"https://onedrive.live.com/download%3fcid=07FAA54DFF6507CA&amp;resid=7FAA54DFF6507CA%2521549546&amp;authkey=ABCSsWfFp8gPI7Y" "16.07.2018 7:49:10" "C:\Users\cihlen\AppData\Local\Temp\UpdateSetup.exe" "1" "/S"</StartArguments>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>"http://m314alta.org/installs/M314AdminSetup.exe" "01.08.2018 20:27:45" "C:\Users\cihlen\AppData\Local\Temp\M314AdminSetup.exe" "1" "/S"</StartArguments>
-  </PropertyGroup>
-</Project>
