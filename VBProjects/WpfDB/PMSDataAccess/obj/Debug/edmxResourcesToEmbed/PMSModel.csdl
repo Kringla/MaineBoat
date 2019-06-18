@@ -1,0 +1,1128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pmstestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Arbeidsdatoer">
+    <Key>
+      <PropertyRef Name="ArbID" />
+    </Key>
+    <Property Name="ArbID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArbDato" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Arbeidsliste">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobbID" Type="Int32" />
+    <Property Name="ArbID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Jobb" Relationship="Self.FK_Arbeidsliste_Jobb" FromRole="Arbeidsliste" ToRole="Jobb" />
+  </EntityType>
+  <EntityType Name="Brannapp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeApparat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Skiftet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SlukkType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FullVekt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CO2VektDriv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Plassering" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SvcDato" Type="DateTime" Precision="3" />
+    <Property Name="Intervall" Type="DateTime" Precision="3" />
+    <Property Name="Signatur" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DistanseTid">
+    <Key>
+      <PropertyRef Name="SerID" />
+    </Key>
+    <Property Name="SerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Seilas" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Dato" Type="DateTime" Precision="3" />
+    <Property Name="Merknad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SeiltDistanse" Type="Single" />
+    <Property Name="TotalDistanse" Type="Single" />
+    <Property Name="SeiltTid" Type="Single" />
+    <Property Name="TotalTid" Type="Single" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Dokumenter">
+    <Key>
+      <PropertyRef Name="DokID" />
+    </Key>
+    <Property Name="DokID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DokFork" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DokTittel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Utgiver" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Utgitt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Media" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Tegning" Type="Boolean" />
+    <Property Name="PlassID" Type="Int32" />
+    <Property Name="DokFil" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Antall" Type="Int32" />
+    <Property Name="HylleSkap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Merknad" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DetaljID" Type="Int32" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="JobbDoks" Relationship="Self.FK_JobbDok_Dokumenter" FromRole="Dokumenter" ToRole="JobbDok" />
+    <NavigationProperty Name="UtstyrDoks" Relationship="Self.FK_UtstyrDok_Dokumenter" FromRole="Dokumenter" ToRole="UtstyrDok" />
+  </EntityType>
+  <EntityType Name="Jobb">
+    <Key>
+      <PropertyRef Name="JobbID" />
+    </Key>
+    <Property Name="JobbID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StrID" Type="Int32" />
+    <Property Name="UtstyrID" Type="Int32" />
+    <Property Name="DetaljID" Type="Int32" />
+    <Property Name="PriID" Type="Int32" />
+    <Property Name="JobbKode" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="JobbNavn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="JobbBeskrivelse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Kontroll" Type="Boolean" />
+    <Property Name="Arbeid" Type="Boolean" />
+    <Property Name="IntTID" Type="Int32" />
+    <Property Name="IntervallDag" Type="Int32" />
+    <Property Name="IntervallUke" Type="Int32" />
+    <Property Name="IntervallMnd" Type="Single" />
+    <Property Name="IntervallYear" Type="Int32" />
+    <Property Name="Frist" Type="DateTime" Precision="3" />
+    <Property Name="Startet" Type="Boolean" />
+    <Property Name="Completed" Type="Boolean" />
+    <Property Name="IntervallGange" Type="Int32" />
+    <Property Name="CompletedGange" Type="Int32" />
+    <Property Name="NesteGange" Type="Int32" />
+    <Property Name="Dokking" Type="Boolean" />
+    <Property Name="Underveis" Type="Boolean" />
+    <Property Name="UnderLand" Type="Boolean" />
+    <Property Name="Dugnad" Type="Boolean" />
+    <Property Name="SendtAnsv" Type="DateTime" Precision="3" />
+    <Property Name="KvalSikr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnsvPerson" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="StillingID" Type="Int32" />
+    <Property Name="Kriterier" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Skjema" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Merknad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Arbeidslistes" Relationship="Self.FK_Arbeidsliste_Jobb" FromRole="Jobb" ToRole="Arbeidsliste" />
+    <NavigationProperty Name="Struktur" Relationship="Self.FK_Jobb_Struktur" FromRole="Jobb" ToRole="Struktur" />
+    <NavigationProperty Name="Utstyr" Relationship="Self.FK_Jobb_Utstyr" FromRole="Jobb" ToRole="Utstyr" />
+    <NavigationProperty Name="XIntervall" Relationship="Self.FK_Jobb_XIntervall" FromRole="Jobb" ToRole="XIntervall" />
+    <NavigationProperty Name="XPrioritet" Relationship="Self.FK_Jobb_XPrioritet" FromRole="Jobb" ToRole="XPrioritet" />
+    <NavigationProperty Name="XStilling" Relationship="Self.FK_Jobb_XStilling" FromRole="Jobb" ToRole="XStilling" />
+    <NavigationProperty Name="JobbDatoes" Relationship="Self.FK_JobbDato_Jobb" FromRole="Jobb" ToRole="JobbDato" />
+    <NavigationProperty Name="JobbDoks" Relationship="Self.FK_JobbDok_Jobb" FromRole="Jobb" ToRole="JobbDok" />
+    <NavigationProperty Name="JobbNorms" Relationship="Self.FK_JobbNorm_Jobb" FromRole="Jobb" ToRole="JobbNorm" />
+  </EntityType>
+  <EntityType Name="JobbDato">
+    <Key>
+      <PropertyRef Name="SerID" />
+    </Key>
+    <Property Name="SerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobbID" Type="Int32" Nullable="false" />
+    <Property Name="StartetDato" Type="DateTime" Precision="3" />
+    <Property Name="CompletedDato" Type="DateTime" Precision="3" />
+    <Property Name="NesteDato" Type="DateTime" Precision="3" />
+    <Property Name="NesteGange" Type="Int32" />
+    <Property Name="KontrollOK" Type="Boolean" />
+    <Property Name="Measurement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KontrollResultat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KontrollSign" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ArbeidBeskrivelse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ArbeidSign" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ArbeidOK" Type="Boolean" />
+    <Property Name="Bilder" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Rapporter" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Jobb" Relationship="Self.FK_JobbDato_Jobb" FromRole="JobbDato" ToRole="Jobb" />
+  </EntityType>
+  <EntityType Name="JobbDok">
+    <Key>
+      <PropertyRef Name="SerID" />
+    </Key>
+    <Property Name="SerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobbID" Type="Int32" />
+    <Property Name="DokID" Type="Int32" />
+    <Property Name="DokRef" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DokImg" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Dokumenter" Relationship="Self.FK_JobbDok_Dokumenter" FromRole="JobbDok" ToRole="Dokumenter" />
+    <NavigationProperty Name="Jobb" Relationship="Self.FK_JobbDok_Jobb" FromRole="JobbDok" ToRole="Jobb" />
+  </EntityType>
+  <EntityType Name="JobbNorm">
+    <Key>
+      <PropertyRef Name="SerID" />
+    </Key>
+    <Property Name="SerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobbID" Type="Int32" />
+    <Property Name="NormID" Type="Int32" />
+    <NavigationProperty Name="Jobb" Relationship="Self.FK_JobbNorm_Jobb" FromRole="JobbNorm" ToRole="Jobb" />
+    <NavigationProperty Name="JobbNorm1" Relationship="Self.FK_JobbNorm_JobbNorm" FromRole="JobbNorm" ToRole="JobbNorm1" />
+    <NavigationProperty Name="JobbNorm2" Relationship="Self.FK_JobbNorm_JobbNorm" FromRole="JobbNorm1" ToRole="JobbNorm" />
+    <NavigationProperty Name="Norm" Relationship="Self.FK_JobbNorm_Norm" FromRole="JobbNorm" ToRole="Norm" />
+  </EntityType>
+  <EntityType Name="Kontakter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firma" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Navn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Adr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Poststed" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Land" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Telf" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Epost" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Kontakttype" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Livvester">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeVest" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Plassering" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FastLivAntall" Type="Int32" />
+    <Property Name="StatusLivAntall" Type="Int32" />
+    <Property Name="FastAnnetAntall" Type="Int32" />
+    <Property Name="StatusAnnetAntall" Type="Int32" />
+    <Property Name="DatoTeltSist" Type="DateTime" Precision="3" />
+    <Property Name="Signatur" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Merknad" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Middel">
+    <Key>
+      <PropertyRef Name="MiddelID" />
+    </Key>
+    <Property Name="MiddelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MiddelNavn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MiddelTypeID" Type="Int32" Nullable="false" />
+    <Property Name="EnhetVolum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Emballasje" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PrisInn" Type="Single" />
+    <Property Name="StatusBeholdning" Type="Single" />
+    <Property Name="StatusDato" Type="DateTime" Precision="3" />
+    <Property Name="Merknader" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AntMin" Type="Single" />
+    <Property Name="Fabrikat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="MiddelType" Relationship="Self.FK_Middel_MiddelType" FromRole="Middel" ToRole="MiddelType" />
+    <NavigationProperty Name="MiddelDetaljs" Relationship="Self.FK_MiddelDetalj_Middel" FromRole="Middel" ToRole="MiddelDetalj" />
+    <NavigationProperty Name="MiddelKorrs" Relationship="Self.FK_MiddelKorr_Middel" FromRole="Middel" ToRole="MiddelKorr" />
+  </EntityType>
+  <EntityType Name="MiddelDetalj">
+    <Key>
+      <PropertyRef Name="MidDetID" />
+    </Key>
+    <Property Name="MidDetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MiddelID" Type="Int32" />
+    <Property Name="PlassID" Type="Int32" />
+    <Property Name="Beholdning" Type="Single" />
+    <Property Name="AntKorrig" Type="Single" />
+    <Property Name="AntInn" Type="Single" />
+    <Property Name="AntTelt" Type="Single" />
+    <Property Name="Merknader" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Middel" Relationship="Self.FK_MiddelDetalj_Middel" FromRole="MiddelDetalj" ToRole="Middel" />
+    <NavigationProperty Name="XPlassering" Relationship="Self.FK_MiddelDetalj_XPlassering" FromRole="MiddelDetalj" ToRole="XPlassering" />
+  </EntityType>
+  <EntityType Name="MiddelKorr">
+    <Key>
+      <PropertyRef Name="MiddelKorrID" />
+    </Key>
+    <Property Name="MiddelKorrID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MiddelID" Type="Int32" />
+    <Property Name="AntKorrig" Type="Single" />
+    <Property Name="AntInn" Type="Single" />
+    <Property Name="AntTelt" Type="Single" />
+    <Property Name="AntStatusStart" Type="Single" />
+    <Property Name="Bruker" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Merknader" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KorrDato" Type="DateTime" Precision="3" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Middel" Relationship="Self.FK_MiddelKorr_Middel" FromRole="MiddelKorr" ToRole="Middel" />
+  </EntityType>
+  <EntityType Name="MiddelType">
+    <Key>
+      <PropertyRef Name="MiddelTypeID" />
+    </Key>
+    <Property Name="MiddelTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MiddelType1" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MiddelBeskrivelse" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Middels" Relationship="Self.FK_Middel_MiddelType" FromRole="MiddelType" ToRole="Middel" />
+  </EntityType>
+  <EntityType Name="Norm">
+    <Key>
+      <PropertyRef Name="NormID" />
+    </Key>
+    <Property Name="NormID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gjelder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Beskrivelse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="JobbNorms" Relationship="Self.FK_JobbNorm_Norm" FromRole="Norm" ToRole="JobbNorm" />
+  </EntityType>
+  <EntityType Name="Reservedel">
+    <Key>
+      <PropertyRef Name="DelID" />
+    </Key>
+    <Property Name="DelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DelNavn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Fabrikat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DelNummer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NATOnr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Spesifikasjon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EnhetVolum" Type="Single" />
+    <Property Name="Emballasje" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EmbMerking" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PrisInn" Type="Single" />
+    <Property Name="StatusDato" Type="DateTime" Precision="3" />
+    <Property Name="StatusBeholdning" Type="Int32" />
+    <Property Name="AntMin" Type="Int32" />
+    <Property Name="Merknad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="ReservedelPlasses" Relationship="Self.FK_ReservedelPlass_Reservedel" FromRole="Reservedel" ToRole="ReservedelPlass" />
+    <NavigationProperty Name="UtstyrReserves" Relationship="Self.FK_UtstyrReserve_Reservedel" FromRole="Reservedel" ToRole="UtstyrReserve" />
+  </EntityType>
+  <EntityType Name="ReservedelPlass">
+    <Key>
+      <PropertyRef Name="DelPlassID" />
+    </Key>
+    <Property Name="DelPlassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DelID" Type="Int32" />
+    <Property Name="PlassID" Type="Int32" />
+    <Property Name="Beholdning" Type="Int32" />
+    <Property Name="AntKorrig" Type="Int32" />
+    <Property Name="AntInn" Type="Int32" />
+    <Property Name="AntTelt" Type="Int32" />
+    <Property Name="Merknader" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Reservedel" Relationship="Self.FK_ReservedelPlass_Reservedel" FromRole="ReservedelPlass" ToRole="Reservedel" />
+    <NavigationProperty Name="XPlassering" Relationship="Self.FK_ReservedelPlass_XPlassering" FromRole="ReservedelPlass" ToRole="XPlassering" />
+  </EntityType>
+  <EntityType Name="Sertifikat">
+    <Key>
+      <PropertyRef Name="SertID" />
+    </Key>
+    <Property Name="SertID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UtstyrID" Type="Int32" />
+    <Property Name="SertNavn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SertNummer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SertDato" Type="DateTime" Precision="3" />
+    <Property Name="SertUtsteder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Intervall" Type="Int32" />
+    <Property Name="FornyDato" Type="DateTime" Precision="3" />
+    <Property Name="Gjelder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Merknad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Utstyr" Relationship="Self.FK_Sertifikat_Utstyr" FromRole="Sertifikat" ToRole="Utstyr" />
+  </EntityType>
+  <EntityType Name="Sjekkliste">
+    <Key>
+      <PropertyRef Name="SjkID" />
+    </Key>
+    <Property Name="SjkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SjkTittel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SjkBruk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DetaljID" Type="Int32" />
+    <Property Name="StrID" Type="Int32" />
+    <Property Name="SjkBrukesNår" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SjkBrukesAv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Struktur" Relationship="Self.FK_Sjekkliste_Struktur" FromRole="Sjekkliste" ToRole="Struktur" />
+    <NavigationProperty Name="XDetalj" Relationship="Self.FK_Sjekkliste_XDetalj" FromRole="Sjekkliste" ToRole="XDetalj" />
+  </EntityType>
+  <EntityType Name="SjekkPunkt">
+    <Key>
+      <PropertyRef Name="SjkDetID" />
+    </Key>
+    <Property Name="SjkDetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SjkID" Type="Int32" Nullable="false" />
+    <Property Name="SjkSer" Type="Int16" Nullable="false" />
+    <Property Name="SjkSubTittel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SjkInnhold" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SjkNB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Struktur">
+    <Key>
+      <PropertyRef Name="StrID" />
+    </Key>
+    <Property Name="StrID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StrNr" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Trinn" Type="Int32" Nullable="false" />
+    <Property Name="StrElement" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="StrKomponenter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="AntUtstyr" Type="Int32" />
+    <Property Name="Merknad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Benyttes" Type="Boolean" />
+    <Property Name="Lavest" Type="Boolean" />
+    <Property Name="DetaljID" Type="Int32" />
+    <Property Name="StrNrTidl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="StrSubNr" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Jobbs" Relationship="Self.FK_Jobb_Struktur" FromRole="Struktur" ToRole="Jobb" />
+    <NavigationProperty Name="Sjekklistes" Relationship="Self.FK_Sjekkliste_Struktur" FromRole="Struktur" ToRole="Sjekkliste" />
+    <NavigationProperty Name="XDetalj" Relationship="Self.FK_Struktur_XDetalj" FromRole="Struktur" ToRole="XDetalj" />
+    <NavigationProperty Name="Utstyrs" Relationship="Self.FK_Utstyr_Struktur" FromRole="Struktur" ToRole="Utstyr" />
+    <NavigationProperty Name="UtstyrReserves" Relationship="Self.FK_UtstyrReserve_Struktur" FromRole="Struktur" ToRole="UtstyrReserve" />
+  </EntityType>
+  <EntityType Name="Utstyr">
+    <Key>
+      <PropertyRef Name="UtstyrID" />
+    </Key>
+    <Property Name="UtstyrID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Utstyr1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UtstyrNr" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Fabrikat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Modell" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StrID" Type="Int32" />
+    <Property Name="Kapasitet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Serienr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NATOnr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DetaljID" Type="Int32" />
+    <Property Name="KravSertifikat" Type="Boolean" />
+    <Property Name="Reserve" Type="Boolean" />
+    <Property Name="GangetidBasis" Type="Boolean" />
+    <Property Name="GangetidStatus" Type="Int32" />
+    <Property Name="ByggeYear" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AntJobber" Type="Int32" />
+    <Property Name="AntJobberUtf" Type="Int32" />
+    <Property Name="Merknad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PlassID" Type="Int32" />
+    <Property Name="Antall" Type="Int32" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Jobbs" Relationship="Self.FK_Jobb_Utstyr" FromRole="Utstyr" ToRole="Jobb" />
+    <NavigationProperty Name="Sertifikats" Relationship="Self.FK_Sertifikat_Utstyr" FromRole="Utstyr" ToRole="Sertifikat" />
+    <NavigationProperty Name="Struktur" Relationship="Self.FK_Utstyr_Struktur" FromRole="Utstyr" ToRole="Struktur" />
+    <NavigationProperty Name="XDetalj" Relationship="Self.FK_Utstyr_XDetalj" FromRole="Utstyr" ToRole="XDetalj" />
+    <NavigationProperty Name="XPlassering" Relationship="Self.FK_Utstyr_XPlassering" FromRole="Utstyr" ToRole="XPlassering" />
+    <NavigationProperty Name="UtstyrDoks" Relationship="Self.FK_UtstyrDok_Utstyr" FromRole="Utstyr" ToRole="UtstyrDok" />
+    <NavigationProperty Name="UtstyrGangetids" Relationship="Self.FK_UtstyrGangetid_Utstyr" FromRole="Utstyr" ToRole="UtstyrGangetid" />
+    <NavigationProperty Name="UtstyrPlasserings" Relationship="Self.FK_UtstyrPlassering_Utstyr" FromRole="Utstyr" ToRole="UtstyrPlassering" />
+    <NavigationProperty Name="UtstyrReserves" Relationship="Self.FK_UtstyrReserve_Utstyr" FromRole="Utstyr" ToRole="UtstyrReserve" />
+  </EntityType>
+  <EntityType Name="UtstyrDok">
+    <Key>
+      <PropertyRef Name="SerID" />
+    </Key>
+    <Property Name="SerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UtstyrID" Type="Int32" />
+    <Property Name="DokID" Type="Int32" />
+    <NavigationProperty Name="Dokumenter" Relationship="Self.FK_UtstyrDok_Dokumenter" FromRole="UtstyrDok" ToRole="Dokumenter" />
+    <NavigationProperty Name="Utstyr" Relationship="Self.FK_UtstyrDok_Utstyr" FromRole="UtstyrDok" ToRole="Utstyr" />
+  </EntityType>
+  <EntityType Name="UtstyrGangetid">
+    <Key>
+      <PropertyRef Name="UGID" />
+    </Key>
+    <Property Name="UGID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UtstyrID" Type="Int32" />
+    <Property Name="GangetidUke" Type="Int32" />
+    <Property Name="GangetidTotal" Type="Int32" />
+    <Property Name="Merknad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LoggDato" Type="DateTime" Precision="3" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Utstyr" Relationship="Self.FK_UtstyrGangetid_Utstyr" FromRole="UtstyrGangetid" ToRole="Utstyr" />
+  </EntityType>
+  <EntityType Name="UtstyrPlassering">
+    <Key>
+      <PropertyRef Name="SerID" />
+    </Key>
+    <Property Name="SerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlassID" Type="Int32" />
+    <Property Name="UtstyrID" Type="Int32" />
+    <NavigationProperty Name="Utstyr" Relationship="Self.FK_UtstyrPlassering_Utstyr" FromRole="UtstyrPlassering" ToRole="Utstyr" />
+    <NavigationProperty Name="XPlassering" Relationship="Self.FK_UtstyrPlassering_XPlassering" FromRole="UtstyrPlassering" ToRole="XPlassering" />
+  </EntityType>
+  <EntityType Name="UtstyrReserve">
+    <Key>
+      <PropertyRef Name="SerID" />
+    </Key>
+    <Property Name="SerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UtstyrID" Type="Int32" />
+    <Property Name="DelID" Type="Int32" />
+    <Property Name="StrID" Type="Int32" />
+    <NavigationProperty Name="Reservedel" Relationship="Self.FK_UtstyrReserve_Reservedel" FromRole="UtstyrReserve" ToRole="Reservedel" />
+    <NavigationProperty Name="Struktur" Relationship="Self.FK_UtstyrReserve_Struktur" FromRole="UtstyrReserve" ToRole="Struktur" />
+    <NavigationProperty Name="Utstyr" Relationship="Self.FK_UtstyrReserve_Utstyr" FromRole="UtstyrReserve" ToRole="Utstyr" />
+  </EntityType>
+  <EntityType Name="XDetalj">
+    <Key>
+      <PropertyRef Name="DetaljID" />
+    </Key>
+    <Property Name="DetaljID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DetaljNavn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="StillingID" Type="Int32" />
+    <NavigationProperty Name="Sjekklistes" Relationship="Self.FK_Sjekkliste_XDetalj" FromRole="XDetalj" ToRole="Sjekkliste" />
+    <NavigationProperty Name="Strukturs" Relationship="Self.FK_Struktur_XDetalj" FromRole="XDetalj" ToRole="Struktur" />
+    <NavigationProperty Name="Utstyrs" Relationship="Self.FK_Utstyr_XDetalj" FromRole="XDetalj" ToRole="Utstyr" />
+    <NavigationProperty Name="XStilling" Relationship="Self.FK_XDetalj_XStilling" FromRole="XDetalj" ToRole="XStilling" />
+  </EntityType>
+  <EntityType Name="XEnhet">
+    <Key>
+      <PropertyRef Name="EmbID" />
+    </Key>
+    <Property Name="Emball" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmbID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="XIntervall">
+    <Key>
+      <PropertyRef Name="IntTID" />
+    </Key>
+    <Property Name="IntTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IntType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IntTypeBeskr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Jobbs" Relationship="Self.FK_Jobb_XIntervall" FromRole="XIntervall" ToRole="Jobb" />
+  </EntityType>
+  <EntityType Name="XParameter">
+    <Key>
+      <PropertyRef Name="StdID" />
+    </Key>
+    <Property Name="StdID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HovedBeholdning" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CCBeholdning" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HovedSertifikat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CCSertifikat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HovedProcure" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CCProcure" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HovedNav" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CCNav" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FilbaneLager" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="XPerson">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonInitial" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="PersonNavn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="XPlassering">
+    <Key>
+      <PropertyRef Name="PlassID" />
+    </Key>
+    <Property Name="PlassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Plassering" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Reserve" Type="Boolean" />
+    <Property Name="Middel" Type="Boolean" />
+    <Property Name="Utstyr" Type="Boolean" />
+    <Property Name="Jobb" Type="Boolean" />
+    <Property Name="Dok" Type="Boolean" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="MiddelDetaljs" Relationship="Self.FK_MiddelDetalj_XPlassering" FromRole="XPlassering" ToRole="MiddelDetalj" />
+    <NavigationProperty Name="ReservedelPlasses" Relationship="Self.FK_ReservedelPlass_XPlassering" FromRole="XPlassering" ToRole="ReservedelPlass" />
+    <NavigationProperty Name="Utstyrs" Relationship="Self.FK_Utstyr_XPlassering" FromRole="XPlassering" ToRole="Utstyr" />
+    <NavigationProperty Name="UtstyrPlasserings" Relationship="Self.FK_UtstyrPlassering_XPlassering" FromRole="XPlassering" ToRole="UtstyrPlassering" />
+  </EntityType>
+  <EntityType Name="XPrioritet">
+    <Key>
+      <PropertyRef Name="PriID" />
+    </Key>
+    <Property Name="PriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Prioritet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PrioritetBeskriv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Jobbs" Relationship="Self.FK_Jobb_XPrioritet" FromRole="XPrioritet" ToRole="Jobb" />
+  </EntityType>
+  <EntityType Name="XStilling">
+    <Key>
+      <PropertyRef Name="StillingID" />
+    </Key>
+    <Property Name="StillingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StillingTittel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PersonNavn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Epost" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Jobbs" Relationship="Self.FK_Jobb_XStilling" FromRole="XStilling" ToRole="Jobb" />
+    <NavigationProperty Name="XDetaljs" Relationship="Self.FK_XDetalj_XStilling" FromRole="XStilling" ToRole="XDetalj" />
+  </EntityType>
+  <EntityType Name="vwStrukturTre">
+    <Key>
+      <PropertyRef Name="StrID" />
+    </Key>
+    <Property Name="StrID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StrNr" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="StrElement" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="Benyttes" Type="Boolean" />
+    <Property Name="StrNavn" Type="String" MaxLength="226" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Arbeidsliste_Jobb">
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="0..1" />
+    <End Role="Arbeidsliste" Type="Self.Arbeidsliste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobb">
+        <PropertyRef Name="JobbID" />
+      </Principal>
+      <Dependent Role="Arbeidsliste">
+        <PropertyRef Name="JobbID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobbDok_Dokumenter">
+    <End Role="Dokumenter" Type="Self.Dokumenter" Multiplicity="0..1" />
+    <End Role="JobbDok" Type="Self.JobbDok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dokumenter">
+        <PropertyRef Name="DokID" />
+      </Principal>
+      <Dependent Role="JobbDok">
+        <PropertyRef Name="DokID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtstyrDok_Dokumenter">
+    <End Role="Dokumenter" Type="Self.Dokumenter" Multiplicity="0..1" />
+    <End Role="UtstyrDok" Type="Self.UtstyrDok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dokumenter">
+        <PropertyRef Name="DokID" />
+      </Principal>
+      <Dependent Role="UtstyrDok">
+        <PropertyRef Name="DokID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobb_Struktur">
+    <End Role="Struktur" Type="Self.Struktur" Multiplicity="0..1" />
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Struktur">
+        <PropertyRef Name="StrID" />
+      </Principal>
+      <Dependent Role="Jobb">
+        <PropertyRef Name="StrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobb_Utstyr">
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="0..1" />
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utstyr">
+        <PropertyRef Name="UtstyrID" />
+      </Principal>
+      <Dependent Role="Jobb">
+        <PropertyRef Name="UtstyrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobb_XIntervall">
+    <End Role="XIntervall" Type="Self.XIntervall" Multiplicity="0..1" />
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XIntervall">
+        <PropertyRef Name="IntTID" />
+      </Principal>
+      <Dependent Role="Jobb">
+        <PropertyRef Name="IntTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobb_XPrioritet">
+    <End Role="XPrioritet" Type="Self.XPrioritet" Multiplicity="0..1" />
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XPrioritet">
+        <PropertyRef Name="PriID" />
+      </Principal>
+      <Dependent Role="Jobb">
+        <PropertyRef Name="PriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobb_XStilling">
+    <End Role="XStilling" Type="Self.XStilling" Multiplicity="0..1" />
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XStilling">
+        <PropertyRef Name="StillingID" />
+      </Principal>
+      <Dependent Role="Jobb">
+        <PropertyRef Name="StillingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobbDato_Jobb">
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="1" />
+    <End Role="JobbDato" Type="Self.JobbDato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobb">
+        <PropertyRef Name="JobbID" />
+      </Principal>
+      <Dependent Role="JobbDato">
+        <PropertyRef Name="JobbID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobbDok_Jobb">
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="0..1" />
+    <End Role="JobbDok" Type="Self.JobbDok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobb">
+        <PropertyRef Name="JobbID" />
+      </Principal>
+      <Dependent Role="JobbDok">
+        <PropertyRef Name="JobbID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobbNorm_Jobb">
+    <End Role="Jobb" Type="Self.Jobb" Multiplicity="0..1" />
+    <End Role="JobbNorm" Type="Self.JobbNorm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobb">
+        <PropertyRef Name="JobbID" />
+      </Principal>
+      <Dependent Role="JobbNorm">
+        <PropertyRef Name="JobbID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobbNorm_JobbNorm">
+    <End Role="JobbNorm" Type="Self.JobbNorm" Multiplicity="1" />
+    <End Role="JobbNorm1" Type="Self.JobbNorm" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="JobbNorm">
+        <PropertyRef Name="SerID" />
+      </Principal>
+      <Dependent Role="JobbNorm1">
+        <PropertyRef Name="SerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobbNorm_Norm">
+    <End Role="Norm" Type="Self.Norm" Multiplicity="0..1" />
+    <End Role="JobbNorm" Type="Self.JobbNorm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Norm">
+        <PropertyRef Name="NormID" />
+      </Principal>
+      <Dependent Role="JobbNorm">
+        <PropertyRef Name="NormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Middel_MiddelType">
+    <End Role="MiddelType" Type="Self.MiddelType" Multiplicity="1" />
+    <End Role="Middel" Type="Self.Middel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MiddelType">
+        <PropertyRef Name="MiddelTypeID" />
+      </Principal>
+      <Dependent Role="Middel">
+        <PropertyRef Name="MiddelTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MiddelDetalj_Middel">
+    <End Role="Middel" Type="Self.Middel" Multiplicity="0..1" />
+    <End Role="MiddelDetalj" Type="Self.MiddelDetalj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Middel">
+        <PropertyRef Name="MiddelID" />
+      </Principal>
+      <Dependent Role="MiddelDetalj">
+        <PropertyRef Name="MiddelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MiddelKorr_Middel">
+    <End Role="Middel" Type="Self.Middel" Multiplicity="0..1" />
+    <End Role="MiddelKorr" Type="Self.MiddelKorr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Middel">
+        <PropertyRef Name="MiddelID" />
+      </Principal>
+      <Dependent Role="MiddelKorr">
+        <PropertyRef Name="MiddelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MiddelDetalj_XPlassering">
+    <End Role="XPlassering" Type="Self.XPlassering" Multiplicity="0..1" />
+    <End Role="MiddelDetalj" Type="Self.MiddelDetalj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XPlassering">
+        <PropertyRef Name="PlassID" />
+      </Principal>
+      <Dependent Role="MiddelDetalj">
+        <PropertyRef Name="PlassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReservedelPlass_Reservedel">
+    <End Role="Reservedel" Type="Self.Reservedel" Multiplicity="0..1" />
+    <End Role="ReservedelPlass" Type="Self.ReservedelPlass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reservedel">
+        <PropertyRef Name="DelID" />
+      </Principal>
+      <Dependent Role="ReservedelPlass">
+        <PropertyRef Name="DelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtstyrReserve_Reservedel">
+    <End Role="Reservedel" Type="Self.Reservedel" Multiplicity="0..1" />
+    <End Role="UtstyrReserve" Type="Self.UtstyrReserve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reservedel">
+        <PropertyRef Name="DelID" />
+      </Principal>
+      <Dependent Role="UtstyrReserve">
+        <PropertyRef Name="DelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReservedelPlass_XPlassering">
+    <End Role="XPlassering" Type="Self.XPlassering" Multiplicity="0..1" />
+    <End Role="ReservedelPlass" Type="Self.ReservedelPlass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XPlassering">
+        <PropertyRef Name="PlassID" />
+      </Principal>
+      <Dependent Role="ReservedelPlass">
+        <PropertyRef Name="PlassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sertifikat_Utstyr">
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="0..1" />
+    <End Role="Sertifikat" Type="Self.Sertifikat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utstyr">
+        <PropertyRef Name="UtstyrID" />
+      </Principal>
+      <Dependent Role="Sertifikat">
+        <PropertyRef Name="UtstyrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sjekkliste_Struktur">
+    <End Role="Struktur" Type="Self.Struktur" Multiplicity="0..1" />
+    <End Role="Sjekkliste" Type="Self.Sjekkliste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Struktur">
+        <PropertyRef Name="StrID" />
+      </Principal>
+      <Dependent Role="Sjekkliste">
+        <PropertyRef Name="StrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sjekkliste_XDetalj">
+    <End Role="XDetalj" Type="Self.XDetalj" Multiplicity="0..1" />
+    <End Role="Sjekkliste" Type="Self.Sjekkliste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XDetalj">
+        <PropertyRef Name="DetaljID" />
+      </Principal>
+      <Dependent Role="Sjekkliste">
+        <PropertyRef Name="DetaljID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Struktur_XDetalj">
+    <End Role="XDetalj" Type="Self.XDetalj" Multiplicity="0..1" />
+    <End Role="Struktur" Type="Self.Struktur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XDetalj">
+        <PropertyRef Name="DetaljID" />
+      </Principal>
+      <Dependent Role="Struktur">
+        <PropertyRef Name="DetaljID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Utstyr_Struktur">
+    <End Role="Struktur" Type="Self.Struktur" Multiplicity="0..1" />
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Struktur">
+        <PropertyRef Name="StrID" />
+      </Principal>
+      <Dependent Role="Utstyr">
+        <PropertyRef Name="StrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtstyrReserve_Struktur">
+    <End Role="Struktur" Type="Self.Struktur" Multiplicity="0..1" />
+    <End Role="UtstyrReserve" Type="Self.UtstyrReserve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Struktur">
+        <PropertyRef Name="StrID" />
+      </Principal>
+      <Dependent Role="UtstyrReserve">
+        <PropertyRef Name="StrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Utstyr_XDetalj">
+    <End Role="XDetalj" Type="Self.XDetalj" Multiplicity="0..1" />
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XDetalj">
+        <PropertyRef Name="DetaljID" />
+      </Principal>
+      <Dependent Role="Utstyr">
+        <PropertyRef Name="DetaljID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Utstyr_XPlassering">
+    <End Role="XPlassering" Type="Self.XPlassering" Multiplicity="0..1" />
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XPlassering">
+        <PropertyRef Name="PlassID" />
+      </Principal>
+      <Dependent Role="Utstyr">
+        <PropertyRef Name="PlassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtstyrDok_Utstyr">
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="0..1" />
+    <End Role="UtstyrDok" Type="Self.UtstyrDok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utstyr">
+        <PropertyRef Name="UtstyrID" />
+      </Principal>
+      <Dependent Role="UtstyrDok">
+        <PropertyRef Name="UtstyrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtstyrGangetid_Utstyr">
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="0..1" />
+    <End Role="UtstyrGangetid" Type="Self.UtstyrGangetid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utstyr">
+        <PropertyRef Name="UtstyrID" />
+      </Principal>
+      <Dependent Role="UtstyrGangetid">
+        <PropertyRef Name="UtstyrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtstyrPlassering_Utstyr">
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="0..1" />
+    <End Role="UtstyrPlassering" Type="Self.UtstyrPlassering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utstyr">
+        <PropertyRef Name="UtstyrID" />
+      </Principal>
+      <Dependent Role="UtstyrPlassering">
+        <PropertyRef Name="UtstyrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtstyrReserve_Utstyr">
+    <End Role="Utstyr" Type="Self.Utstyr" Multiplicity="0..1" />
+    <End Role="UtstyrReserve" Type="Self.UtstyrReserve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utstyr">
+        <PropertyRef Name="UtstyrID" />
+      </Principal>
+      <Dependent Role="UtstyrReserve">
+        <PropertyRef Name="UtstyrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtstyrPlassering_XPlassering">
+    <End Role="XPlassering" Type="Self.XPlassering" Multiplicity="0..1" />
+    <End Role="UtstyrPlassering" Type="Self.UtstyrPlassering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XPlassering">
+        <PropertyRef Name="PlassID" />
+      </Principal>
+      <Dependent Role="UtstyrPlassering">
+        <PropertyRef Name="PlassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XDetalj_XStilling">
+    <End Role="XStilling" Type="Self.XStilling" Multiplicity="0..1" />
+    <End Role="XDetalj" Type="Self.XDetalj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XStilling">
+        <PropertyRef Name="StillingID" />
+      </Principal>
+      <Dependent Role="XDetalj">
+        <PropertyRef Name="StillingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PMSConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Arbeidsdatoers" EntityType="Self.Arbeidsdatoer" />
+    <EntitySet Name="Arbeidslistes" EntityType="Self.Arbeidsliste" />
+    <EntitySet Name="Brannapps" EntityType="Self.Brannapp" />
+    <EntitySet Name="DistanseTids" EntityType="Self.DistanseTid" />
+    <EntitySet Name="Dokumenters" EntityType="Self.Dokumenter" />
+    <EntitySet Name="Jobbs" EntityType="Self.Jobb" />
+    <EntitySet Name="JobbDatoes" EntityType="Self.JobbDato" />
+    <EntitySet Name="JobbDoks" EntityType="Self.JobbDok" />
+    <EntitySet Name="JobbNorms" EntityType="Self.JobbNorm" />
+    <EntitySet Name="Kontakters" EntityType="Self.Kontakter" />
+    <EntitySet Name="Livvesters" EntityType="Self.Livvester" />
+    <EntitySet Name="Middels" EntityType="Self.Middel" />
+    <EntitySet Name="MiddelDetaljs" EntityType="Self.MiddelDetalj" />
+    <EntitySet Name="MiddelKorrs" EntityType="Self.MiddelKorr" />
+    <EntitySet Name="MiddelTypes" EntityType="Self.MiddelType" />
+    <EntitySet Name="Norms" EntityType="Self.Norm" />
+    <EntitySet Name="Reservedels" EntityType="Self.Reservedel" />
+    <EntitySet Name="ReservedelPlasses" EntityType="Self.ReservedelPlass" />
+    <EntitySet Name="Sertifikats" EntityType="Self.Sertifikat" />
+    <EntitySet Name="Sjekklistes" EntityType="Self.Sjekkliste" />
+    <EntitySet Name="SjekkPunkts" EntityType="Self.SjekkPunkt" />
+    <EntitySet Name="Strukturs" EntityType="Self.Struktur" />
+    <EntitySet Name="Utstyrs" EntityType="Self.Utstyr" />
+    <EntitySet Name="UtstyrDoks" EntityType="Self.UtstyrDok" />
+    <EntitySet Name="UtstyrGangetids" EntityType="Self.UtstyrGangetid" />
+    <EntitySet Name="UtstyrPlasserings" EntityType="Self.UtstyrPlassering" />
+    <EntitySet Name="UtstyrReserves" EntityType="Self.UtstyrReserve" />
+    <EntitySet Name="XDetaljs" EntityType="Self.XDetalj" />
+    <EntitySet Name="XEnhets" EntityType="Self.XEnhet" />
+    <EntitySet Name="XIntervalls" EntityType="Self.XIntervall" />
+    <EntitySet Name="XParameters" EntityType="Self.XParameter" />
+    <EntitySet Name="XPersons" EntityType="Self.XPerson" />
+    <EntitySet Name="XPlasserings" EntityType="Self.XPlassering" />
+    <EntitySet Name="XPrioritets" EntityType="Self.XPrioritet" />
+    <EntitySet Name="XStillings" EntityType="Self.XStilling" />
+    <EntitySet Name="vwStrukturTres" EntityType="Self.vwStrukturTre" />
+    <AssociationSet Name="FK_Arbeidsliste_Jobb" Association="Self.FK_Arbeidsliste_Jobb">
+      <End Role="Jobb" EntitySet="Jobbs" />
+      <End Role="Arbeidsliste" EntitySet="Arbeidslistes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobbDok_Dokumenter" Association="Self.FK_JobbDok_Dokumenter">
+      <End Role="Dokumenter" EntitySet="Dokumenters" />
+      <End Role="JobbDok" EntitySet="JobbDoks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtstyrDok_Dokumenter" Association="Self.FK_UtstyrDok_Dokumenter">
+      <End Role="Dokumenter" EntitySet="Dokumenters" />
+      <End Role="UtstyrDok" EntitySet="UtstyrDoks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobb_Struktur" Association="Self.FK_Jobb_Struktur">
+      <End Role="Struktur" EntitySet="Strukturs" />
+      <End Role="Jobb" EntitySet="Jobbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobb_Utstyr" Association="Self.FK_Jobb_Utstyr">
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+      <End Role="Jobb" EntitySet="Jobbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobb_XIntervall" Association="Self.FK_Jobb_XIntervall">
+      <End Role="XIntervall" EntitySet="XIntervalls" />
+      <End Role="Jobb" EntitySet="Jobbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobb_XPrioritet" Association="Self.FK_Jobb_XPrioritet">
+      <End Role="XPrioritet" EntitySet="XPrioritets" />
+      <End Role="Jobb" EntitySet="Jobbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobb_XStilling" Association="Self.FK_Jobb_XStilling">
+      <End Role="XStilling" EntitySet="XStillings" />
+      <End Role="Jobb" EntitySet="Jobbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobbDato_Jobb" Association="Self.FK_JobbDato_Jobb">
+      <End Role="Jobb" EntitySet="Jobbs" />
+      <End Role="JobbDato" EntitySet="JobbDatoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobbDok_Jobb" Association="Self.FK_JobbDok_Jobb">
+      <End Role="Jobb" EntitySet="Jobbs" />
+      <End Role="JobbDok" EntitySet="JobbDoks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobbNorm_Jobb" Association="Self.FK_JobbNorm_Jobb">
+      <End Role="Jobb" EntitySet="Jobbs" />
+      <End Role="JobbNorm" EntitySet="JobbNorms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobbNorm_JobbNorm" Association="Self.FK_JobbNorm_JobbNorm">
+      <End Role="JobbNorm" EntitySet="JobbNorms" />
+      <End Role="JobbNorm1" EntitySet="JobbNorms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobbNorm_Norm" Association="Self.FK_JobbNorm_Norm">
+      <End Role="Norm" EntitySet="Norms" />
+      <End Role="JobbNorm" EntitySet="JobbNorms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Middel_MiddelType" Association="Self.FK_Middel_MiddelType">
+      <End Role="MiddelType" EntitySet="MiddelTypes" />
+      <End Role="Middel" EntitySet="Middels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MiddelDetalj_Middel" Association="Self.FK_MiddelDetalj_Middel">
+      <End Role="Middel" EntitySet="Middels" />
+      <End Role="MiddelDetalj" EntitySet="MiddelDetaljs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MiddelKorr_Middel" Association="Self.FK_MiddelKorr_Middel">
+      <End Role="Middel" EntitySet="Middels" />
+      <End Role="MiddelKorr" EntitySet="MiddelKorrs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MiddelDetalj_XPlassering" Association="Self.FK_MiddelDetalj_XPlassering">
+      <End Role="XPlassering" EntitySet="XPlasserings" />
+      <End Role="MiddelDetalj" EntitySet="MiddelDetaljs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReservedelPlass_Reservedel" Association="Self.FK_ReservedelPlass_Reservedel">
+      <End Role="Reservedel" EntitySet="Reservedels" />
+      <End Role="ReservedelPlass" EntitySet="ReservedelPlasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtstyrReserve_Reservedel" Association="Self.FK_UtstyrReserve_Reservedel">
+      <End Role="Reservedel" EntitySet="Reservedels" />
+      <End Role="UtstyrReserve" EntitySet="UtstyrReserves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReservedelPlass_XPlassering" Association="Self.FK_ReservedelPlass_XPlassering">
+      <End Role="XPlassering" EntitySet="XPlasserings" />
+      <End Role="ReservedelPlass" EntitySet="ReservedelPlasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sertifikat_Utstyr" Association="Self.FK_Sertifikat_Utstyr">
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+      <End Role="Sertifikat" EntitySet="Sertifikats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sjekkliste_Struktur" Association="Self.FK_Sjekkliste_Struktur">
+      <End Role="Struktur" EntitySet="Strukturs" />
+      <End Role="Sjekkliste" EntitySet="Sjekklistes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sjekkliste_XDetalj" Association="Self.FK_Sjekkliste_XDetalj">
+      <End Role="XDetalj" EntitySet="XDetaljs" />
+      <End Role="Sjekkliste" EntitySet="Sjekklistes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Struktur_XDetalj" Association="Self.FK_Struktur_XDetalj">
+      <End Role="XDetalj" EntitySet="XDetaljs" />
+      <End Role="Struktur" EntitySet="Strukturs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Utstyr_Struktur" Association="Self.FK_Utstyr_Struktur">
+      <End Role="Struktur" EntitySet="Strukturs" />
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtstyrReserve_Struktur" Association="Self.FK_UtstyrReserve_Struktur">
+      <End Role="Struktur" EntitySet="Strukturs" />
+      <End Role="UtstyrReserve" EntitySet="UtstyrReserves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Utstyr_XDetalj" Association="Self.FK_Utstyr_XDetalj">
+      <End Role="XDetalj" EntitySet="XDetaljs" />
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Utstyr_XPlassering" Association="Self.FK_Utstyr_XPlassering">
+      <End Role="XPlassering" EntitySet="XPlasserings" />
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtstyrDok_Utstyr" Association="Self.FK_UtstyrDok_Utstyr">
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+      <End Role="UtstyrDok" EntitySet="UtstyrDoks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtstyrGangetid_Utstyr" Association="Self.FK_UtstyrGangetid_Utstyr">
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+      <End Role="UtstyrGangetid" EntitySet="UtstyrGangetids" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtstyrPlassering_Utstyr" Association="Self.FK_UtstyrPlassering_Utstyr">
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+      <End Role="UtstyrPlassering" EntitySet="UtstyrPlasserings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtstyrReserve_Utstyr" Association="Self.FK_UtstyrReserve_Utstyr">
+      <End Role="Utstyr" EntitySet="Utstyrs" />
+      <End Role="UtstyrReserve" EntitySet="UtstyrReserves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtstyrPlassering_XPlassering" Association="Self.FK_UtstyrPlassering_XPlassering">
+      <End Role="XPlassering" EntitySet="XPlasserings" />
+      <End Role="UtstyrPlassering" EntitySet="UtstyrPlasserings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XDetalj_XStilling" Association="Self.FK_XDetalj_XStilling">
+      <End Role="XStilling" EntitySet="XStillings" />
+      <End Role="XDetalj" EntitySet="XDetaljs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
