@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 3.7.6 - 14.06.19
+Dette er M314ADMIN database, versjon 3.7.7 - 16.06.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -34,10 +34,10 @@ Følgende er endret tidligere:
 26. Ustabilt  generalrulle-, kvalifikasjons- og påmeldingsbilde endret (3.7.3 - 02.05.19) 
 27. Fjerne farger fra generalrulle for å øke hastigeten med 40% (3.7.4 - 03.05.19)
 28. Meny har fått requery av dato/arr. Bug fjernet fra Køytildeling. (3.7.5 - 13.06.19)
-
-NYTT:
 29. Alderutregning endret i Medlems-skjemaet (3.7.6 - 13.06.19)
+NYTT:
 
+30. Bug i epost headingstring fjernet. (3.7.7 - 16.06.19)
 *************************************************
 
 Når du har lukket denne filen, starter databasen automatisk. 
