@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="787ce0976f00494b932111d4c93cdcf8" Name="Diagram1">
+        <EntityTypeShape EntityType="pmstestModel.Arbeidsdatoer" Width="1.5" PointX="10.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Arbeidsliste" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Brannapp" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.DistanseTid" Width="1.5" PointX="12.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Dokumenter" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Jobb" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.JobbDato" Width="1.5" PointX="7.5" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.JobbDok" Width="1.5" PointX="10.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.JobbNorm" Width="1.5" PointX="10.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Kontakter" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Livvester" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Middel" Width="1.5" PointX="0.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.MiddelDetalj" Width="1.5" PointX="3" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.MiddelKorr" Width="1.5" PointX="3" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.MiddelType" Width="1.5" PointX="1.5" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Norm" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Reservedel" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.ReservedelPlass" Width="1.5" PointX="6" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Sertifikat" Width="1.5" PointX="5.25" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Sjekkliste" Width="1.5" PointX="3.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.SjekkPunkt" Width="1.5" PointX="12.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Struktur" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.Utstyr" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.UtstyrDok" Width="1.5" PointX="8.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.UtstyrGangetid" Width="1.5" PointX="5.25" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.UtstyrPlassering" Width="1.5" PointX="8.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.UtstyrReserve" Width="1.5" PointX="8.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.XDetalj" Width="1.5" PointX="1.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.XEnhet" Width="1.5" PointX="14.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.XIntervall" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.XParameter" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.XPerson" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.XPlassering" Width="1.5" PointX="0.75" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.XPrioritet" Width="1.5" PointX="3" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.XStilling" Width="1.5" PointX="1.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pmstestModel.vwStrukturTre" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="pmstestModel.FK_Arbeidsliste_Jobb" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_JobbDok_Dokumenter" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_UtstyrDok_Dokumenter" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Jobb_Struktur" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Jobb_Utstyr" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Jobb_XIntervall" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Jobb_XPrioritet" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Jobb_XStilling" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_JobbDato_Jobb" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_JobbDok_Jobb" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_JobbNorm_Jobb" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_JobbNorm_JobbNorm" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_JobbNorm_Norm" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Middel_MiddelType" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_MiddelDetalj_Middel" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_MiddelKorr_Middel" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_MiddelDetalj_XPlassering" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_ReservedelPlass_Reservedel" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_UtstyrReserve_Reservedel" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_ReservedelPlass_XPlassering" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Sertifikat_Utstyr" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Sjekkliste_Struktur" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Sjekkliste_XDetalj" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Struktur_XDetalj" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Utstyr_Struktur" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_UtstyrReserve_Struktur" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Utstyr_XDetalj" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_Utstyr_XPlassering" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_UtstyrDok_Utstyr" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_UtstyrGangetid_Utstyr" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_UtstyrPlassering_Utstyr" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_UtstyrReserve_Utstyr" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_UtstyrPlassering_XPlassering" ManuallyRouted="false" />
+        <AssociationConnector Association="pmstestModel.FK_XDetalj_XStilling" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

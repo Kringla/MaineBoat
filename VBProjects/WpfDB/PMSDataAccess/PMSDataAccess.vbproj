@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7D81BEE-B60A-4878-9AE9-B916D7F068A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PMSDataAccess</RootNamespace>
+    <AssemblyName>PMSDataAccess</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PMSDataAccess.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PMSDataAccess.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arbeidsdatoer.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Arbeidsliste.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Brannapp.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.vb" />
+    <Compile Include="DistanseTid.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dokumenter.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Jobb.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobbDato.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobbDok.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobbNorm.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kontakter.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Livvester.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Middel.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MiddelDetalj.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MiddelKorr.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MiddelType.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Norm.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PMSModel.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PMSModel.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PMSModel.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reservedel.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReservedelPlass.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sertifikat.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sjekkliste.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SjekkPunkt.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Struktur.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utstyr.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UtstyrDok.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UtstyrGangetid.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UtstyrPlassering.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UtstyrReserve.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwStrukturTre.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XDetalj.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XEnhet.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XIntervall.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XParameter.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XPerson.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XPlassering.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XPrioritet.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XStilling.vb">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <EntityDeploy Include="PMSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PMSModel.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="PMSModel.edmx.diagram">
+      <DependentUpon>PMSModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PMSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PMSModel.Context.vb</LastGenOutput>
+      <DependentUpon>PMSModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="PMSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PMSModel.edmx</DependentUpon>
+      <LastGenOutput>PMSModel.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
