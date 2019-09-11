@@ -238,3 +238,5 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+Source/Admin/EpostMedlemmer09.09.2019.csv
+*.xls
