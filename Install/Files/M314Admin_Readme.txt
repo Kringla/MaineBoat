@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 4.2.0 - 06.09.19
+Dette er M314ADMIN database, versjon 4.3.0 - 25.09.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -16,8 +16,8 @@ Følgende er endret tidligere:
 9. Logiske detaljer endret ifm. fag/stilling omb/kvalifisering i Medlemsdata-bildet. (4.1.3 - 03.09.19)
 10. Bug fjernet fra utskrift av årsprogram. (4.1.4 - 04.09.19)
 11. Bug fjernet fra avlysning av arrangement. Arrangementsoversikt forbedret (4.1.5 - 04.09.19)
-
-NYTT: 
 12. Kalender lagt til i Meny 'Arrangementskalender'. (4.2.0 - 06.09.19)
 
+NYTT: 
+13.	Endringer i arreangementer/årsprogram medfører ny liste tilbys seendt webmaster (4.3.0 - 25.09.19)
 Når du har lukket denne filen, starter databasen automatisk. 
