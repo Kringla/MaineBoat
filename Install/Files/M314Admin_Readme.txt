@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 4.3.0 - 25.09.19
+Dette er M314ADMIN database, versjon 4.4.1 - 01.10.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -17,7 +17,14 @@ Følgende er endret tidligere:
 10. Bug fjernet fra utskrift av årsprogram. (4.1.4 - 04.09.19)
 11. Bug fjernet fra avlysning av arrangement. Arrangementsoversikt forbedret (4.1.5 - 04.09.19)
 12. Kalender lagt til i Meny 'Arrangementskalender'. (4.2.0 - 06.09.19)
+13.	Endringer i arrangementer/årsprogram medfører ny liste tilbys sendt webmaster (4.3.0 - 25.09.19)
+14. I klokkeslett skal timer og minutter separeres med punktum (4.3.0 - 26.09.19)
+15. I klokkeslett skal timer og minutter separeres med kolon (serial 14 ble feil) (4.4.0 - 29.09.19)
+16. Ny eksport av .xsl for konvertering til .ics-fil (Google Calendar)(4.4.0 - 29.09.19)
+17.	Endringer i arrangementer/årsprogram medfører ny liste tilbys sendt utvikler (serial 13 ble feil) (4.4.0 - 25.09.19)
 
 NYTT: 
-13.	Endringer i arreangementer/årsprogram medfører ny liste tilbys seendt webmaster (4.3.0 - 25.09.19)
-Når du har lukket denne filen, starter databasen automatisk. 
+18. Debugged kvalifikasjons kontroll prosessen. (4.4.1 - 01.10.19)
+
+*************************************************
+Når du lukker denne filen, vil databasen automatisk åpne seg. 
