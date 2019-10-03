@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 4.4.1 - 01.10.19
+Dette er M314ADMIN database, versjon 4.5.0 - 04.10.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -22,9 +22,10 @@ Følgende er endret tidligere:
 15. I klokkeslett skal timer og minutter separeres med kolon (serial 14 ble feil) (4.4.0 - 29.09.19)
 16. Ny eksport av .xsl for konvertering til .ics-fil (Google Calendar)(4.4.0 - 29.09.19)
 17.	Endringer i arrangementer/årsprogram medfører ny liste tilbys sendt utvikler (serial 13 ble feil) (4.4.0 - 25.09.19)
+18. Debugged kvalifikasjons kontroll prosessen. (4.4.1 - 01.10.19)
 
 NYTT: 
-18. Debugged kvalifikasjons kontroll prosessen. (4.4.1 - 01.10.19)
+18. Lagt til nye felter dbo.Arrangementer og dbo.Dugnader for å bedre funksjonalitet mot hjemmesider. Tirsdagsdugnader kan nå legges innfor et år ad gangen iht. årsprogram! (4.5.0 - 04.10.19)
 
 *************************************************
 Når du lukker denne filen, vil databasen automatisk åpne seg. 
