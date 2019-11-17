@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 5.2.1 - 30.10.19
+Dette er M314ADMIN database, versjon 5.3.0- 13.11.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -11,21 +11,23 @@ TEKNISK:
 3. Bug i sletteprosedyre rettet.  (5.1.0 - 18.10.19)
 5. Bug i MS SQL View rettet.  (5.1.1 - 23.10.19)
 6. Bug i MS SQL View rettet.  (5.1.1 - 24.10.19)
+9. Bug i ID benevning i frmPerson fjernet.  (5.2.1 - 30.10.19)
+10. Bugs i visibles og enables i frmMedlemNytt fjernet.  (5.2.1 - 30.10.19)
 
 
 FUNKSJONALITET:
 4. Endringer i automatikk for oppdateriong av arrangementer, inkl utsernding av epost til webmaster.  (5.1.0 - 18.10.19)
 7. Endret adressering av e-post som genereres ved endringer til medlemsdata og aktiviteter/selskaper.  (5.2.0 - 27.10.19)
 8. Endret innlegging av nytt medlem/gjest til nytt, enklere skjermbilde.  (5.2.0 - 29.10.19)
+11. Endret sammenlikning av nye personer/medlemmer med eksisterende i databasen.  (5.2.1 - 30.10.19)
+12. Laget nytt Splash for å gjøre oppmerksom på Håndbokas betydning.  (5.2.1 - 30.10.19)
 
 
 NYTT - TEKNISK: 
-9. Bug i ID benevning i frmPerson fjernet.  (5.2.1 - 30.10.19)
-10. Bugs i visibles og enables i frmMedlemNytt fjernet.  (5.2.1 - 30.10.19)
+
 
 NYTT - FUNKSJONALITET: 
-11. Endret sammenlikning av nye personer/medlemmer med eksisterende i databasen.  (5.2.1 - 30.10.19)
-12. Laget nytt Splash for å gjøre oppmerksom på Håndbokas betydning.  (5.2.1 - 30.10.19)
+13. Muliggjorde å legge inn arrangementer som krever påmelding, - også (NB!) interne selskaper.  (5.3.0- 13.11.19)
 
 
 *************************************************
