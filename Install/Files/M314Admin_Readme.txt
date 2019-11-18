@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 5.3.0- 13.11.19
+Dette er M314ADMIN database, versjon 5.4.0- 17.11.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -21,13 +21,14 @@ FUNKSJONALITET:
 8. Endret innlegging av nytt medlem/gjest til nytt, enklere skjermbilde.  (5.2.0 - 29.10.19)
 11. Endret sammenlikning av nye personer/medlemmer med eksisterende i databasen.  (5.2.1 - 30.10.19)
 12. Laget nytt Splash for å gjøre oppmerksom på Håndbokas betydning.  (5.2.1 - 30.10.19)
+13. Muliggjorde å legge inn arrangementer som krever påmelding, - også (NB!) interne selskaper.  (5.3.0- 13.11.19)
 
 
 NYTT - TEKNISK: 
 
 
 NYTT - FUNKSJONALITET: 
-13. Muliggjorde å legge inn arrangementer som krever påmelding, - også (NB!) interne selskaper.  (5.3.0- 13.11.19)
+14. Laget funksjonalitet for å kunne slette nye arrangementer som er blitt definert ved feiltagelser.  (5.4.0- 17.11.19)
 
 
 *************************************************
