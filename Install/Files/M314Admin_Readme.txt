@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 5.4.0- 17.11.19
+Dette er M314ADMIN database, versjon 5.5.1 - 25.11.19
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier. 
@@ -13,6 +13,7 @@ TEKNISK:
 6. Bug i MS SQL View rettet.  (5.1.1 - 24.10.19)
 9. Bug i ID benevning i frmPerson fjernet.  (5.2.1 - 30.10.19)
 10. Bugs i visibles og enables i frmMedlemNytt fjernet.  (5.2.1 - 30.10.19)
+15. Bug fjernet, skjermbildelukking ved kansellering av 'Nytt Arrangement'.  (5.4.1- 18.11.19)
 
 
 FUNKSJONALITET:
@@ -22,14 +23,16 @@ FUNKSJONALITET:
 11. Endret sammenlikning av nye personer/medlemmer med eksisterende i databasen.  (5.2.1 - 30.10.19)
 12. Laget nytt Splash for å gjøre oppmerksom på Håndbokas betydning.  (5.2.1 - 30.10.19)
 13. Muliggjorde å legge inn arrangementer som krever påmelding, - også (NB!) interne selskaper.  (5.3.0- 13.11.19)
+14. Laget funksjonalitet for å kunne slette nye arrangementer som er blitt definert ved feiltagelser.  (5.4.0- 17.11.19)
+16. Utskrift med oversikt over medlemmer (totalt, nye, utmeldte osv) innført.  (5.4.1- 19.11.19)
+17. Skjermbilde (Hovedmeny>Parametre/Statistikk) og utskrift (Medlemsoversikt i Hovedmeny>Medlemmer) med oversikt over medlemmer (totalt, nye, utmeldte osv) innført.  (5.5.0- 21.11.19)
 
 
 NYTT - TEKNISK: 
-
+18. Logisk brist i forbindelse med opptellinger i Medlemsstatistikk skjermbilde og utskrift.  (5.5.1- 25.11.19)
 
 NYTT - FUNKSJONALITET: 
-14. Laget funksjonalitet for å kunne slette nye arrangementer som er blitt definert ved feiltagelser.  (5.4.0- 17.11.19)
-
+19. Kosmetisk endring av Hovedmeny.  (5.5.1- 25.11.19)
 
 *************************************************
 Når du lukker denne filen, vil databasen automatisk åpne seg. 
