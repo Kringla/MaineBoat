@@ -1,0 +1,12 @@
+﻿.arr_calendar {
+    margin: 10px;
+}
+
+    .arr_calendar .fc-content {
+        background-color: Highlight;
+        white-space: normal;
+    }
+
+    .arr_calendar .fc-title {
+        color: black;
+    }
