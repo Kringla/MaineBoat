@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 5.7.1 - 10.01.20
+Dette er M314ADMIN database, versjon 5.7.2 - 14.01.20
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier!
@@ -7,11 +7,9 @@ NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7>
 Følgende er endret siden forrige versjon:
 
 TEKNISK: 
-1. Feil ved endring av sesong for kontingent oversikt rettet.
-3. Bug ved innlegging av nytt arrangement fjernet.
+1. Sjekk av MedlemSesong innført ved oppstart.
 
 FUNKSJONALITET:
-2. Ny funksjonalitet ifm. oversikt over utfakturert og innbetalt kontingent.
 
 
 
