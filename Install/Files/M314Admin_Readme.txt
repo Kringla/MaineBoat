@@ -7,11 +7,9 @@ NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7>
 Følgende er endret siden forrige versjon:
 
 TEKNISK: 
-1. Sjekk av MedlemSesong (Hvem som er medlemmer i en sesong/år) innført ved oppstart.
-2. Fjernet kode for automatisk sending av mail, uten forutgående sjekk av innhold.
+1. Fjernet bug i qryMedlemSesong, - felt manglet.
 
 FUNKSJONALITET:
-3. Lagt til mulighet til å se medlems kontingentstatus.
 
 
 *************************************************
