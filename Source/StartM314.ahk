@@ -106,7 +106,7 @@ Return
 Return
 
 #3::
-	RunAndLogonIfExist("M314Sponsor.accde", "105881_da56307", "Maine1953", "M314SponsorSetup", "")
+	RunAndLogonIfExist("M314db.accde", "105881_kr28513", "Maine1953", "M314dbSetup", "")
 Return
 
 #5::
