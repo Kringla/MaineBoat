@@ -1,4 +1,4 @@
-Dette er M314SELSKAP database (3.4.1 - 27.01.20)
+Dette er M314SELSKAP database (3.4.2 - 12.03.20)
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <1> tastene for å¨åpne databasen. Du må IKKE lage egne snarveier. 
@@ -6,7 +6,7 @@ NB! For at automatiske oppdateringer skal fungere, MÅ du benytte <Win> + <1> tas
 *************************************************
 Følgende er endret tidligere:
 TEKNISK RELEVANSE:
-1. 	Bug fjernet i hovedmeny, knapp åpner nå Fremtidige arrangementer. (3.4.1 - 27.01.20)
+1. 	Navne endring på Meny-filen 
 
 BRUKER RELEVANSE:
 
