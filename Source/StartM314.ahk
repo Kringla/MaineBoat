@@ -105,9 +105,9 @@ Return
 	RunAndLogonIfExist("M314SelskapTest.accde", "105881_od92908", "Maine1953", "M314SelskapTestSetup", "")
 Return
 
-#3::
-	RunAndLogonIfExist("M314db.accde", "105881_kr28513", "Maine1953", "M314dbSetup", "")
-Return
+;#3::
+;	RunAndLogonIfExist("M314db.accde", "105881_kr28513", "Maine1953", "M314dbSetup", "")
+;Return
 
 #5::
 	RunAndLogonIfExist("M314PVS.accde", "105881_ah72261", "Maine1953", "M314PVSSetup", "")
