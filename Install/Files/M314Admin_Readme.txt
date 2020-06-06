@@ -1,4 +1,4 @@
-Dette er M314ADMIN database, versjon 5.8.92 - 28.04.20
+Dette er M314ADMIN database, versjon 5.8.93 - 06.05.20
 *************************************************
 
 NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7> tastene for å¨åpne denne databasen. Du må IKKE lage egne snarveier!
@@ -7,8 +7,7 @@ NB! For at automatiske oppdateringer skal fungere, MÅ du KUN benytte <Win> + <7>
 Følgende er endret siden forrige versjon:
 
 TEKNISK: 
-1. Bug i Generalrulle, land og vising av arrangementstittel i arrangementer
-2. Utmeldingsmail-knapp synliggjort
+1. Sentrert logg inn bilde
 
 FUNKSJONALITET:
 
