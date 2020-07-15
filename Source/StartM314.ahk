@@ -97,24 +97,21 @@ RunAndLogonIfExist(sFilename, sUsername, sPassword, sSetupFile, sMessage)
 	}
 }
 
+
 #1::
-	RunAndLogonIfExist("M314Selskap.accde", "105881_lt85170", "Maine1953", "M314SelskapSetup", "")
+	RunAndLogonIfExist("M314VF.accde", "105881_yb31958", "Oslo2020", "M314VFSetup", "")
 Return
 
 #2::
-	RunAndLogonIfExist("M314SelskapTest.accde", "105881_od92908", "Maine1953", "M314SelskapTestSetup", "")
+	RunAndLogonIfExist("M314VFTest.accde", "105881_ah72261", "Oslo2020", "M314VFTestSetup", "")
 Return
 
-;#3::
-;	RunAndLogonIfExist("M314db.accde", "105881_kr28513", "Maine1953", "M314dbSetup", "")
-;Return
-
-#5::
-	RunAndLogonIfExist("M314PVS.accde", "105881_ah72261", "Maine1953", "M314PVSSetup", "")
+#3::
+	RunAndLogonIfExist("M314VFParty.accde", "105881_yb31958", "Oslo2020", "M314SelskapSetup", "")
 Return
 
-#6::
-	RunAndLogonIfExist("M314PVSTest.accde", "105881_eh47088", "Maine1953", "M314PVSTestSetup", "")
+#4::
+	RunAndLogonIfExist("M314VFPartyTest.accde", "105881_od92908", "Maine1953", "M314SelskapTestSetup", "")
 Return
 
 #7::
@@ -122,7 +119,7 @@ Return
 Return
 
 #8::
-	RunAndLogonIfExist("M314AdminTest.accde", "105881_mc66918", "Maine1953", "M314AdminTestSetup", "")
+	RunAndLogonIfExist("M314Selskap.accde", "105881_lt85170", "Maine1953", "M314SelskapSetup", "")
 Return
 
 
