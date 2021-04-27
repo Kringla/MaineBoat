@@ -293,7 +293,7 @@ FunctionEnd
 Function InstallSqlClient
 
   StrCpy $R0 "$TEMP\sqlncli_amd64.msi"
-  StrCpy $R1 "http://m314alta.org/installs/sqlncli_amd64.msi"
+  StrCpy $R1 "http://ihlen.net/installs/sqlncli_amd64.msi"
     
   IfFileExists $SYSDIR\sqlncli10.dll endsql
   DetailPrint "sqlncli10.dll er ikke installert!"
@@ -303,7 +303,7 @@ Function InstallSqlClient
   
   ;MessageBox MB_OK "sqlncli_amd64.msi not exist, downloading! "
   DetailPrint "Laster ned sqlncli_amd64.msi..."
-  NSISdl::download http://m314alta.org/installs/sqlncli_amd64.msi $R0 
+  NSISdl::download http://ihlen.net/installs/sqlncli_amd64.msi $R0 
   
   Pop $0 ; "success" or a error code
   StrCmp $0 "success" instSql
@@ -358,7 +358,7 @@ Section
   
     ; Put files here
   File /a "Files\App.ico"
-  File /a "Files\CIAutoUpdater.exe"
+  File /a "Files\CIAutoUpdater.*"
   File /a "Files\StartM314.exe"
   File /a "Files\MSAccessTrustedLocations.exe"
   File /a "Files\M314${M314_NAME}_Readme.txt"

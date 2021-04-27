@@ -3,7 +3,7 @@
 ;---------------------------------------------------------------
 
 ; Auto Updater
-!define AUTOUPDATE_URL "http://m314alta.org/installs/M314${M314_NAME}Setup.exe"
+!define AUTOUPDATE_URL "http://ihlen.net/installs/M314${M314_NAME}Setup.exe"
 
 !include "_M314AppsSetupBase.nsi"
 

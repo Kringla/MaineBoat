@@ -1,4 +1,4 @@
-﻿;#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+;#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -113,16 +113,5 @@ Return
 #4::
 	RunAndLogonIfExist("M314VFPartyTest.accde", "105881_od92908", "Maine1953", "M314SelskapTestSetup", "")
 Return
-
-#7::
-	RunAndLogonIfExist("M314Admin.accde", "105881_kr28513", "Maine1953", "M314AdminSetup", "")
-Return
-
-#8::
-	RunAndLogonIfExist("M314Selskap.accde", "105881_lt85170", "Maine1953", "M314SelskapSetup", "")
-Return
-
-
-
 
 
