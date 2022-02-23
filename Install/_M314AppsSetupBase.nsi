@@ -17,34 +17,10 @@
 !define SETUP_FILEBASE "M314${M314_NAME}Setup"
 !define PRODUCT_NAME "M314 ${M314_NAME}"
 !define PUBLISHER "Gerhard B. Ihlen"
- 
-;!define exec "program.exe"
-; file containing list of file-installation commands
- ;!define files "${SETUP_FILEBASE}.files.nsi"
- 
-; file containing list of file-uninstall commands
- ;!define unfiles "${SETUP_FILEBASE}.unfiles.nsi"
- 
-; optional stuff
- 
-; Set the text which prompts the user to enter the installation directory
-; DirText "My Description Here."
- 
-; text file to open in notepad after installation
-; !define notefile "README.txt"
   
 ; icons must be Microsoft .ICO files
  !define icon "Files\App.ico"
  
-; installer background screen
-; !define screenimage background.bmp
- 
-; file containing list of file-installation commands
-; !define files "files.nsi"
- 
-; file containing list of file-uninstall commands
-; !define unfiles "unfiles.nsi"
-
 ; icons must be Microsoft .ICO files
  !define defaultInstallDir "C:\M314Apps"
  
@@ -402,40 +378,6 @@ Section
  
 SectionEnd
  
-; create shortcuts
-; Section
- 
-  ; CreateDirectory "${startmenu}"
-  ; SetOutPath $INSTDIR ; for working directory
-; !ifdef icon
-  ; CreateShortCut "${startmenu}\${PRODUCT_NAME}.lnk" "$INSTDIR\${exec}" "" "$INSTDIR\${icon}"
-; !else
-  ; CreateShortCut "${startmenu}\${PRODUCT_NAME}.lnk" "$INSTDIR\${exec}"
-; !endif
- 
-; !ifdef notefile
-  ; CreateShortCut "${startmenu}\Release Notes.lnk "$INSTDIR\${notefile}"
-; !endif
- 
-; !ifdef helpfile
-  ; CreateShortCut "${startmenu}\Documentation.lnk "$INSTDIR\${helpfile}"
-; !endif
- 
-; !ifdef website
-; WriteINIStr "${startmenu}\web site.url" "InternetShortcut" "URL" ${website}
- ; ; CreateShortCut "${startmenu}\Web Site.lnk "${website}" "URL"
-; !endif
- 
-; !ifdef notefile
-; ExecShell "open" "$INSTDIR\${notefile}"
-; !endif
- 
-; SectionEnd
- 
-; Uninstaller
-; All section names prefixed by "Un" will be in the uninstaller
- 
-;UninstallText "This will uninstall ${PRODUCT_NAME}."
  
 !ifdef icon
 UninstallIcon "${icon}"
@@ -509,10 +451,5 @@ done:
  
   ;Delete "${startmenu}\*.*"
   ;Delete "${startmenu}"
- 
-
-
- 
-
  
 SectionEnd
